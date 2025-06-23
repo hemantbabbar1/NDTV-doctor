@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is COVID-19 and how does it impact health and communities?",
+    "answer": "COVID-19 is an infectious disease caused by the coronavirus SARS-CoV-2. It primarily spreads through respiratory droplets."
+  },
+  {
+    "question": "What are the most common symptoms of COVID-19 and how to identify them?",
+    "answer": "Common symptoms include fever, cough, tiredness, and loss of taste or smell. Some people may experience more severe symptoms."
+  },
+  {
+    "question": "How can I protect myself and my family from COVID-19 infection daily?",
+    "answer": "Wear a mask, maintain social distancing, wash your hands regularly, and get vaccinated."
+  },
+  {
+    "question": "Who is at higher risk of severe illness from COVID-19 and what precautions to take?",
+    "answer": "Older adults and people with underlying health conditions are at higher risk of developing severe illness from COVID-19."
+  },
+  {
+    "question": "Where can I get more information and updates about COVID-19 guidelines?",
+    "answer": "Visit the official WHO or your local health authority website for the latest updates and guidelines."
+  },
+  {
+    "question": "Can I get COVID-19 from food or food packaging and how to stay safe?",
+    "answer": "There is currently no evidence that COVID-19 is transmitted through food or food packaging."
+  },
+  {
+    "question": "How long does it take to show symptoms after COVID-19 exposure?",
+    "answer": "Symptoms may appear 2-14 days after exposure to the virus."
+  },
+  {
+    "question": "Is there a treatment for COVID-19 and what should I do if I test positive?",
+    "answer": "Most people recover with supportive care. Severe cases may require hospitalization. Consult your doctor for guidance."
+  },
+  {
+    "question": "Can children get COVID-19 and what symptoms do they usually show?",
+    "answer": "Yes, children can get COVID-19, but they generally have milder symptoms compared to adults."
+  },
+  {
+    "question": "Should I wear a mask after vaccination as per current recommendations?",
+    "answer": "Yes, continue to follow local guidelines regarding mask-wearing, even after vaccination, especially in crowded places."
+  }
+]

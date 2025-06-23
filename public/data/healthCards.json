@@ -1,0 +1,28 @@
+[
+  {
+    "icon": "#vj-Featured-Covid",
+    "title": "Coronavirus",
+    "link": "#"
+  },
+  {
+    "icon": "#vj-HIV",
+    "title": "HIV & AIDS",
+    "link": "#"
+  },
+  {
+    "icon": "#vj-Pregnancy",
+    "title": "Pregnancy",
+    "link": "#"
+  },
+  {
+    "icon": "#vj-Diabities",
+    "title": "Diabetes",
+    "link": "#"
+  },
+
+  {
+    "icon": "#vj-Cancer",
+    "title": "Cancer",
+    "link": "#"
+  }
+]

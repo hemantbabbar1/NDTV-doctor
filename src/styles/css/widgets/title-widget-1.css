@@ -1,0 +1,130 @@
+.Dcttl1_wr {
+    float: left;
+    display: inline-block;
+    margin: 20px 0 15px 0;
+    padding: 0;
+}
+
+.Dcttl1_cn {
+    float: left;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.Dcttl1_ttl {
+    float: left;
+    display: inline-block;
+    margin: 0 0 12px 0;
+    padding: 0;
+    font-size: 20px;
+    color: var(--vj-cl-dr);
+}
+
+
+.Dcttl1_txt {
+    float: left;
+    color: var(--vj-cl-dr2);
+    display: inline-block;
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-size: 16px;
+    /* color:var(--vj-cl-dr); */
+    line-height: 26px;
+}
+
+
+.Dcttl1_bt {
+    float: left;
+    color: var(--vj-cl-dr2);
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+    padding: 0;
+    width: 100%;
+    /* border-top: 1px solid var(--vj-cl-rg1); */
+}
+
+
+.FqPg_pst-by {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.FqPg_pst-by {
+    display: inline-block;
+    float: left;
+    width: 100%;
+}
+
+.FqPg_pst-by_ul,
+.sp-cn .FqPg_pst-by_ul {
+    display: flex;
+    color: var(--vj-cl-dr5);
+    float: left;
+    font-size: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0
+}
+
+.FqPg_pst-by_li {
+    display: flex;
+    float: left;
+    font-size: 12px;
+    font-family: var(--ff-two);
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    /* white-space: nowrap; */
+    margin-right: 10px;
+    position: relative;
+    padding: 0 0 0 10px;
+}
+
+.FqPg_pst-by_li:first-child {
+    padding-left: 0
+}
+
+.FqPg_pst-by_li:first-child:before {
+    display: none
+}
+
+.FqPg_pst-by_li:before {
+    content: '';
+    width: 1px;
+    height: 18px;
+    background: var(--vj-cl-rg1);
+    left: 0;
+    top: 1px;
+    position: absolute;
+}
+
+.FqPg_pst-by_lnk,
+.FqPg_pst-by_lnk a {
+    color: var(--vj-cl-mtx);
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+    white-space: nowrap
+}
+
+.FqPg_pst-by_lnk {
+    margin-left:3px
+}
+
+.FqPg_pst-by_txt {
+    color: var(--vj-cl-dr5);
+    display: flex;
+    margin-right: 5px
+}
+
+
+@media(min-width:992px){
+.Dcttl1_wr{margin:0 0 15px}
+    .Dcttl1_ttl{font-size:28px}
+    .FqPg_pst-by_li{font-size:14px}
+}
