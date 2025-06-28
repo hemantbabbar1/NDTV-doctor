@@ -40,10 +40,15 @@ const Find_Health = () => {
 
   const [cardData, setCardData] = useState([]);
   useEffect(() => {
-    axios
-      .get("/data/healthCards.json")
-      .then((res) => setCardData(res.data))
-      .catch((err) => console.error(err));
+    const fetchCards = async () => {
+      try {
+        const res = await axios.get("/data/healthCards.json");
+        setCardData(res.data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    fetchCards();
   }, []);
 
   return (
@@ -51,7 +56,11 @@ const Find_Health = () => {
       <section className="section_two">
         <div className="FdHhSl_wr">
           <div className="vjl-cntr">
-            <Title1 title="Find Health Solutions" link="#" />
+            <div className="vjl-row">
+              <div className="vjl-md-12">
+                <Title1 title="Find Health Solutions" link="#" />
+              </div>
+            </div>
             <div className="vjl-row">
               <div className="vjl-md-12">
                 <div className="FdHhSl_bg">

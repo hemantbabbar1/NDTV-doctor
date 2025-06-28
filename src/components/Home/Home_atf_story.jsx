@@ -1,15 +1,19 @@
 import React from "react";
 import HmCrd_C from "./HmCrd_C";
 import Image from "next/image";
+// Context API for Articles
+import { useArticles } from "@/src/context/ArticlesContext";
+import Link from "next/link";
 
-const Home_atf_story = ({ articles }) => {
-  if (!articles || !articles.results || articles.results.length === 0)
-    return null;
+const Home_atf_story = () => {
+  const { articles } = useArticles();
+
+  if (!articles || articles.length === 0) return null;
 
   // Main story (first article)
-  const mainStory = articles.results[0];
-  const mainStory1 = articles.results[1];
-  const mainStory2 = articles.results[2];
+  const mainStory = articles[0];
+  const mainStory1 = articles[1];
+  const mainStory2 = articles[2];
 
   return (
     <>
@@ -19,28 +23,42 @@ const Home_atf_story = ({ articles }) => {
           <div className="HmCr_col1">
             <div className="crd-b crd-b_h-at res_crd-1">
               <div className="crd_img">
-                <div className="img-gr img-gr_a">
-                  <Image
-                    src={mainStory.thumb_image}
-                    alt={mainStory.title}
-                    width={594}
-                    height={334}
-                    sizes="(max-width: 600px) 100vw, 594px"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                </div>
+                <Link
+                  className="img-gr img-gr_a"
+                  href={mainStory.link}
+                  title={mainStory.title}
+                >
+                  {mainStory && (
+                    <Image
+                      src={mainStory.thumb_image}
+                      alt={mainStory.title}
+                      width={594}
+                      height={334}
+                      sizes="(max-width: 600px) 100vw, 594px"
+                      style={{ width: "100%", height: "auto" }}
+                    />
+                  )}
+                </Link>
               </div>
 
               <div className="crd_txt-wrp crd-b_Txbg1">
                 <div className="crd_cat">
-                  <a className="crd_cat-lk" href="#">
-                    {mainStory.category}
-                  </a>
+                  <Link
+                    className="crd_cat-lk"
+                    href={mainStory.link}
+                    title={mainStory.title}
+                  >
+                    {mainStory ? mainStory.category : null}
+                  </Link>
                 </div>
                 <h2 className="crd_D-ttl7">
-                  <a className="crd_lnk" href="#">
-                    {mainStory.title}
-                  </a>
+                  <Link
+                    className="crd_lnk"
+                    href={mainStory.link}
+                    title={mainStory.title}
+                  >
+                    {mainStory ? mainStory.title : null}
+                  </Link>
                 </h2>
               </div>
             </div>
@@ -48,28 +66,42 @@ const Home_atf_story = ({ articles }) => {
             <ul className="vjl-row  vjl-row- hf">
               <li className="vjl-md-6">
                 <div className="crd-b pb-0">
-                  <a href="#" className="crd_img">
-                    <div className="img-gr img-gr_a">
-                      <Image
-                        src={mainStory1.thumb_image}
-                        alt={mainStory1.title}
-                        width={240}
-                        height={180}
-                        sizes="(max-width: 600px) 100vw, 240px"
-                        style={{ width: "100%", height: "auto" }}
-                      />
-                    </div>
-                  </a>
+                  <div className="crd_img">
+                    <Link
+                      className="img-gr img-gr_a"
+                      href={mainStory1.link}
+                      title={mainStory1.title}
+                    >
+                      {mainStory1 && (
+                        <Image
+                          src={mainStory1.thumb_image}
+                          alt={mainStory1.title}
+                          width={240}
+                          height={180}
+                          sizes="(max-width: 600px) 100vw, 240px"
+                          style={{ width: "100%", height: "auto" }}
+                        />
+                      )}
+                    </Link>
+                  </div>
                   <div className="crd_txt-wrp">
                     <div className="crd_cat">
-                      <a className="crd_cat-lk" href="#">
-                        {mainStory1.category}
-                      </a>
+                      <Link
+                        className="crd_cat-lk"
+                        href={mainStory1.link}
+                        title={mainStory1.title}
+                      >
+                        {mainStory1 ? mainStory1.category : null}
+                      </Link>
                     </div>
                     <h3 className="crd_D-ttl">
-                      <a className="crd_lnk" href="#">
-                        {mainStory1.title}
-                      </a>
+                      <Link
+                        className="crd_lnk"
+                        href={mainStory1.link}
+                        title={mainStory1.title}
+                      >
+                        {mainStory1 ? mainStory1.title : null}
+                      </Link>
                     </h3>
                   </div>
                 </div>
@@ -77,28 +109,42 @@ const Home_atf_story = ({ articles }) => {
 
               <li className="vjl-md-6">
                 <div className="crd-b pb-0">
-                  <a href="#" className="crd_img">
+                  <Link
+                    className="crd_img"
+                    href={mainStory2.link}
+                    title={mainStory2.title}
+                  >
                     <div className="img-gr img-gr_a">
-                      <Image
-                        src={mainStory2.thumb_image}
-                        alt={mainStory2.title}
-                        width={240}
-                        height={180}
-                        sizes="(max-width: 600px) 100vw, 240px"
-                        style={{ width: "100%", height: "auto" }}
-                      />
+                      {mainStory2 && (
+                        <Image
+                          src={mainStory2.thumb_image}
+                          alt={mainStory2.title}
+                          width={240}
+                          height={180}
+                          sizes="(max-width: 600px) 100vw, 240px"
+                          style={{ width: "100%", height: "auto" }}
+                        />
+                      )}
                     </div>
-                  </a>
+                  </Link>
                   <div className="crd_txt-wrp">
                     <div className="crd_cat">
-                      <a className="crd_cat-lk" href="#">
-                        {mainStory2.category}
-                      </a>
+                      <Link
+                        className="crd_cat-lk"
+                        href={mainStory2.link}
+                        title={mainStory2.title}
+                      >
+                        {mainStory2 ? mainStory2.category : null}
+                      </Link>
                     </div>
                     <h3 className="crd_D-ttl">
-                      <a className="crd_lnk" href="#">
-                        {mainStory2.title}
-                      </a>
+                      <Link
+                        className="crd_lnk"
+                        href={mainStory2.link}
+                        title={mainStory2.title}
+                      >
+                        {mainStory2 ? mainStory2.title : null}
+                      </Link>
                     </h3>
                   </div>
                 </div>

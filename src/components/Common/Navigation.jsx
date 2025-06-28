@@ -23,7 +23,7 @@ const Navigation = () => {
     fetchNavLinks();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  //if (loading) return <div>Loading...</div>;
   if (error) return <div style={{ color: "red" }}>Error: {error}</div>;
 
   return (

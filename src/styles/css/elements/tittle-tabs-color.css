@@ -290,12 +290,13 @@
     border: 1px solid var(--vj-cl-tpttl4);
     border-radius: 2px;
     color: var(--vj-cl-tpttl5);
-    display: flex;
+    display: inline-block;
     align-items: center;
-    justify-content: center;
+    text-align: center;
     width: 32px;
     height: 32px;
-    margin: 0 0 0 30px;
+    margin: -5px 0 0 30px;
+    line-height: 32px;
 }
 
 

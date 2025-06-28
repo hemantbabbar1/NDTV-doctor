@@ -19,12 +19,11 @@ import "../styles/css/cards/card-bt.css";
 import "../styles/css/cards/card-image-transition.css";
 
 //import home components
-
-import Atf_Symbols from "../components/Common/Atf_Symbols";
 import Atf_sections from "../components/Home/sections/Atf_sections";
-import Find_health from "../components/Home/sections/Find_health";
-import Home_faq from "../components/Home/sections/Home_faq";
-import Pregnancy_solution from "../components/Home/sections/Pregnancy_solution";
+import Home_section1 from "../components/Home/sections/Home_section1";
+import Home_section2 from "../components/Home/sections/Home_section2";
+import Home_section3 from "../components/Home/sections/Home_section3";
+import Home_section4 from "../components/Home/sections/Home_section4";
 
 const Page = () => {
   return (
@@ -33,12 +32,15 @@ const Page = () => {
       <Atf_sections />
 
       {/* <!--====== Find Health Solutions ======--> */}
-      <Find_health />
+      <Home_section1 />
 
       {/* <!--====== FAQs - The Answers You Need ======--> */}
-      <Home_faq />
+      <Home_section2 />
 
-      <Pregnancy_solution />
+      {/* <!--====== Pregenancy Solutions ======--> */}
+      <Home_section3 />
+
+      <Home_section4 />
     </>
   );
 };

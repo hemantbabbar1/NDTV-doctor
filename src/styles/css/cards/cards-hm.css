@@ -1,17 +1,15 @@
-
 /*--====== Light ======--*/
 :root {
     --vj-cl-hm1: #BBBBBC;
 
 }
-/*--====== Dark ======--*/
-:root .day_night {
-    
 
-}
+/*--====== Dark ======--*/
+:root .day_night {}
 
 /*--====== Dark Mode ======--*/
-@media (prefers-color-scheme:dark){
+@media (prefers-color-scheme:dark) {
+
     /*--====== Dark ======--*/
     :root {
         --vj-cl-hm1: #444444;
@@ -19,9 +17,7 @@
     }
 
     /*--====== Light ======--*/
-    :root .day_night {
-      
-    }
+    :root .day_night {}
 }
 
 
@@ -31,9 +27,11 @@
     padding: 0 12px;
     width: 100%;
 }
+
 .HmCr_li .crd_ttl {
     min-height: 64px;
 }
+
 .HmCr_ul {
     display: flex;
     margin: 0 -12px;
@@ -41,7 +39,7 @@
 }
 
 .HmCr_row {
-        display: -webkit-box;
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -50,7 +48,8 @@
     margin-left: -12px;
 }
 
-.HmCr_col1, .HmCr_col2 {
+.HmCr_col1,
+.HmCr_col2 {
     display: flex;
     float: left;
     position: relative;
@@ -88,7 +87,7 @@
     /* margin-bottom: 8px; */
 }
 
-.HmCr_li .crd-c .crd_img{
+.HmCr_li .crd-c .crd_img {
     width: 155px;
     order: 2;
     margin: 0 0 0 12px;
@@ -100,7 +99,7 @@
 }
 
 
-.HmCr_wr{
+.HmCr_wr {
     display: inline-block;
     float: left;
     border-bottom: 1px dashed var(--vj-cl-hm1);
@@ -110,11 +109,13 @@
 }
 
 
-.HmCr_li:last-child .HmCr_wr{
+.HmCr_li:last-child .HmCr_wr {
     border-bottom: 0;
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
 
-.HmCr_col1 .crd_ttl7{min-height:100px}
+.HmCr_col1 .crd_ttl7 {
+    min-height: 100px
+}

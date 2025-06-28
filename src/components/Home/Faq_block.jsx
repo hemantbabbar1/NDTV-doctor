@@ -10,19 +10,19 @@ const Home_faq_block = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("/data/faqs.json") // API endpoint for FAQs
-      .then((res) => {
+    const fetchFaqs = async () => {
+      try {
+        const res = await fetch("/data/faqs.json"); // API endpoint for FAQs
         if (!res.ok) throw new Error("Failed to fetch FAQs");
-        return res.json();
-      })
-      .then((data) => {
+        const data = await res.json();
         setFaqs(data);
-        setLoading(false);
-      })
-      .catch((err) => {
+      } catch (err) {
         setError(err.message);
+      } finally {
         setLoading(false);
-      });
+      }
+    };
+    fetchFaqs();
   }, []);
 
   if (loading) return <div>Loading...</div>;
@@ -30,7 +30,17 @@ const Home_faq_block = () => {
 
   return (
     <>
-      <Title1 title="FAQs - The Answers You Need" link="/faq" />
+      <div className="vjl-row">
+        <div className="vjl-md-12">
+          <Title1 title="FAQs - The Answers You Need1" link="/faq" />
+          <a className="tp_arrBx" href="/faq">
+            <svg className="vj_icn vj-icn-arrow-left">
+              <use xlinkHref="#vj-icn-arrow-left"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+
       <div className="vjl-row">
         <div className="vjl-md-6">
           <div className="DcFaq_wr">

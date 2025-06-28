@@ -5,11 +5,12 @@ import "../../styles/css/widgets/side-widget-home.css";
 
 // Context API for Articles
 import { useArticles } from "@/src/context/ArticlesContext";
+import Link from "next/link";
 
 const Trending_news = () => {
   const { articles } = useArticles();
-  // 10th to 14th index (inclusive of 10, exclusive of 15)
-  const trendingArticles = articles?.results?.slice(10, 14) || [];
+  // 9th to 13th index articles (10th to 14th articles)
+  const trendingArticles = articles?.slice(9, 13) || [];
 
   return (
     <>
@@ -22,12 +23,12 @@ const Trending_news = () => {
           <ul className="s-ls_ul s-ls_br s-ls_ul3 mb-15">
             {trendingArticles.map((article, idx) => (
               <li className="s-ls_li" key={article.id || idx}>
-                <div className="crd_cat">
-                  <a className="crd_cat-lk" href="#">
-                    {article.category}
-                  </a>
-                </div>
-                <a href={article.url} className="s-ls_lnk">
+                <div className="crd_cat">{article.category}</div>
+                <a
+                  href={article.link}
+                  title="{article.link}"
+                  className="s-ls_lnk"
+                >
                   <div className="s-ls_txt">{article.title}</div>
                 </a>
               </li>

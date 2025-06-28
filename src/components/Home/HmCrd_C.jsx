@@ -1,12 +1,14 @@
 import React from "react";
 import Image from "next/image";
+import { useArticles } from "@/src/context/ArticlesContext";
+import Link from "next/link";
 
-const HmCrd_C = ({ articles }) => {
-  if (!articles || !articles.results || articles.results.length < 10)
-    return null;
+const HmCrd_C = () => {
+  const { articles } = useArticles();
+  if (!articles || articles.length < 10) return null;
 
-  // Get articles from index 4 to 10 (inclusive)
-  const atfMidArt = articles.results.slice(4, 10);
+  // Get articles from index 4 to 10 (inclusive of 4, exclusive of 10)
+  const atfMidArt = articles.slice(4, 10);
 
   return (
     <>
@@ -17,7 +19,11 @@ const HmCrd_C = ({ articles }) => {
               <div className="HmCr_wr">
                 <div className="crd-c">
                   <div className="crd_img">
-                    <div className="img-gr img-gr_a">
+                    <Link
+                      className="img-gr img-gr_a"
+                      href={article.link}
+                      title={article.title}
+                    >
                       <Image
                         className="lz_img crd_img-full"
                         alt={article.title}
@@ -27,23 +33,20 @@ const HmCrd_C = ({ articles }) => {
                         sizes="(max-width: 600px) 100vw, 240px"
                         style={{ width: "100%", height: "auto" }}
                       />
-                    </div>
+                    </Link>
                   </div>
                   <div className="crd_txt-wrp">
                     <div className="crd_cat">
-                      <a className="crd_cat-lk" href="#">
-                        {article.category}
-                      </a>
+                      <div className="crd_cat-lk">{article.category}</div>
                     </div>
                     <h3 className="crd_D-ttl">
-                      <a
+                      <Link
                         className="crd_lnk"
                         href={article.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        title={article.title}
                       >
                         {article.title}
-                      </a>
+                      </Link>
                     </h3>
                   </div>
                 </div>
