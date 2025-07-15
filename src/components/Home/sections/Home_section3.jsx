@@ -22,9 +22,7 @@ const Pregnancy_solution = () => {
           <div className="vjl-cntr">
             <div className="vjl-row">
               <div className="vjl-md-12">
-                <Title1
-                  title="Pregnancy &amp; Solutions"
-                  link="/pregnancy-solution"
+                <Title1 title="Pregnancy &amp; Solutions" link="/pregnancy-solution"
                 />
               </div>
             </div>
@@ -43,7 +41,7 @@ const Pregnancy_solution = () => {
                             alt={pregNwsArticles14.title}
                             width={594}
                             height={334}
-                            sizes="(max-width: 600px) 100vw, 594px"
+                            //sizes="(max-width: 600px) 100vw, 594px"
                           />
                         </Link>
                       )}
@@ -88,10 +86,10 @@ const Pregnancy_solution = () => {
                               <Image
                                 src={article.thumb_image}
                                 alt={article.title}
-                                width={594}
-                                height={334}
-                                sizes="(max-width: 600px) 100vw, 594px"
-                                style={{ width: "100%", height: "auto" }}
+                                width={226}
+                                height={127}
+                                //sizes="(max-width: 600px) 100vw, 594px"
+                                //style={{ width: "100%", height: "auto" }}
                               />
                             </Link>
                           </div>

@@ -1,137 +1,144 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Title1 from "../Title1";
 import "../../../styles/css/elements/tb-tab.css";
+import Link from "next/link";
+import Image from "next/image";
 
-import { useState } from "react";
-
-// Context API for Articles
-import { useArticles } from "@/src/context/ArticlesContext";
-
-const Home_section4 = () => {
+// This component now receives 'allData' and 'error' as props
+const Home_section4 = ({ allData, error }) => {
+  const categories = ["Women", "Men", "Kids"];
   const [activeTab, setActiveTab] = useState(0);
-  const tabs = [
-    { label: "Women", content: "Tab 1 Content" },
-    { label: "Men", content: "Tab 2 Content" },
-    { label: "Kids", content: "Tab 3 Content" },
-  ];
+
+  if (error) {
+    return (
+      <section className="section_two">
+        <div className="vjl-cntr text-center text-red-600">
+          <p>Error: {error}</p>
+        </div>
+      </section>
+    );
+  }
+
+  if (!allData || allData.length === 0) {
+    return (
+      <section className="section_two">
+        <div className="vjl-cntr text-center text-gray-500">
+          <p>No content available.</p>
+        </div>
+      </section>
+    );
+  }
+
+  const TabContent = ({ data, categories }) => {
+    const activeCategory = categories[activeTab];
+    const firstResult = data.find((item) => item.category === activeCategory);
+    const filtered = data
+      .filter((item) => item.category === activeCategory)
+      .slice(0, 4);
+
+    return (
+      <>
+        <div className="vjl-md-12">
+          {firstResult ? (
+            <div className="crd-c_v2 mb-30" key={firstResult.id}>
+              <div className="crd_img">
+                <Link className="img-gr img-gr_a" href={firstResult.link}>
+                  <Image
+                    className=""
+                    title={firstResult.title}
+                    alt={firstResult.title}
+                    src={firstResult.thumb_image}
+                    width={685}
+                    height={386}
+                  />
+                </Link>
+              </div>
+              <div className="crd_txt-wrp">
+                <div className="crd_cat">
+                  <Link className="crd_cat-lk" href={firstResult.link}>
+                    {firstResult.category}
+                  </Link>
+                </div>
+                <h3 className="crd_D-ttl4">
+                  <Link href={firstResult.link} className="crd_lnk">
+                    {firstResult.title}
+                  </Link>
+                </h3>
+              </div>
+            </div>
+          ) : (
+            <div style={{ color: "#888", padding: "1rem" }}>
+              No data found for this category.
+            </div>
+          )}
+        </div>
+        <div className="vjl-md-12">
+          <div className="ls-ns ls-ns-3">
+            <ul className="ls-ns_ul ls-ns_br">
+              {filtered.slice(1, 4).map((item) => (
+                <li className="ls-ns_li" key={item.id}>
+                  <div className="crd-c_v1">
+                    <Link href={item.link} className="crd_img">
+                      <div className="img-gr img-gr_a">
+                        <Image
+                          className=""
+                          title={item.title}
+                          alt={item.title}
+                          src={item.thumb_image}
+                          width={190}
+                          height={107}
+                        />
+                      </div>
+                    </Link>
+                    <div className="crd_txt-wrp">
+                      <div className="crd_cat">
+                        <Link className="crd_cat-lk" href={item.link}>
+                          {item.category}
+                        </Link>
+                      </div>
+                      <h3 className="crd_D-ttl2">
+                        <Link className="crd_lnk" href={item.link}>
+                          {item.title}
+                        </Link>
+                      </h3>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </>
+    );
+  };
 
   return (
     <>
-      <div>
-        <div style={{ display: "flex", gap: 10 }}>
-          {tabs.map((tab, idx) => (
-            <button
-              key={tab.label}
-              onClick={() => setActiveTab(idx)}
-              style={{
-                fontWeight: activeTab === idx ? "bold" : "normal",
-                borderBottom: activeTab === idx ? "2px solid blue" : "none",
-              }}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
-        <div style={{ marginTop: 20 }}>{tabs[activeTab].content}</div>
-      </div>
-
       <section className="section_two">
         <div className="vjl-cntr">
           <div className="vjl-row">
             <div className="vjl-md-12">
               <Title1 title="Health Solution" link="/health-solution" />
               <div className="TlTbs hr-scroll">
-                <ul className="TlTbs-ul hr-scroll__content" id="ulwebfeattab">
-                  <li id="webfeattab-1" className="TlTbs-li">
-                    <a
-                      href="javascript:void(0)"
-                      className="TlTbs-lnk TlTbs-act"
-                    >
-                      Women
-                    </a>
-                  </li>
-                  <li id="webfeattab-2" className="TlTbs-li">
-                    <a href="javascript:void(0)" className="TlTbs-lnk">
-                      Men
-                    </a>
-                  </li>
-                  <li id="webfeattab-6" className="TlTbs-li">
-                    {" "}
-                    <a href="javascript:void(0)" className="TlTbs-lnk">
-                      kids
-                    </a>{" "}
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="vjl-md-12">
-              <div className="crd-c_v2 mb-30">
-                <div className="crd_img">
-                  <div className="img-gr img-gr_a">
-                    <img
-                      className=""
-                      title=""
-                      alt=""
-                      src="images/doctor/injection.png"
-                      data-src="images/doctor/injection.png"
-                    />
-                  </div>
-                </div>
-
-                <div className="crd_txt-wrp">
-                  <div className="crd_cat">
-                    <a className="crd_cat-lk" href="#">
-                      Health Care
-                    </a>
-                  </div>
-                  <h3 className="crd_D-ttl4">
-                    <a href="#" className="crd_lnk">
-                      Second Trimester Of Pregnancy: Expert Explains Symptoms,
-                      Diet, and Exercise Second Trimester
-                    </a>
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="vjl-md-12">
-              <div className="ls-ns ls-ns-3">
-                <ul className="ls-ns_ul ls-ns_br">
-                  <li className="ls-ns_li">
-                    <div className="crd-c_v1">
-                      <a href="#" className="crd_img">
-                        <div className="img-gr img-gr_a">
-                          <img
-                            className=""
-                            title=""
-                            alt=""
-                            src="images/doctor/hlth3.png"
-                            data-src="images/doctor/hlth3.png"
-                          />
-                        </div>
-                      </a>
-
-                      <div className="crd_txt-wrp">
-                        <div className="crd_cat">
-                          <a className="crd_cat-lk" href="#">
-                            Health Care
-                          </a>
-                        </div>
-                        <h3 className="crd_D-ttl2">
-                          <a className="crd_lnk" href="#">
-                            Second Trimester Of Pregnancy: Expert Explains
-                            Symptoms, Diet,
-                          </a>
-                        </h3>
+                <ul className="TlTbs-ul hr-scroll__content">
+                  {categories.map((cat, idx) => (
+                    <li className="TlTbs-li" key={idx}>
+                      <div
+                        onClick={() => setActiveTab(idx)}
+                        className={`TlTbs-lnk${
+                          activeTab === idx ? " TlTbs-act" : ""
+                        }`}
+                      >
+                        {cat}
                       </div>
-                    </div>
-                  </li>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
+            <TabContent data={allData} categories={categories} />
           </div>
         </div>
       </section>

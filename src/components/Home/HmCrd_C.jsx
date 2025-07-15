@@ -30,8 +30,8 @@ const HmCrd_C = () => {
                         src={article.thumb_image}
                         width={240}
                         height={180}
-                        sizes="(max-width: 600px) 100vw, 240px"
-                        style={{ width: "100%", height: "auto" }}
+                        //sizes="(max-width: 600px) 100vw, 240px"
+                        //style={{ width: "100%", height: "auto" }}
                       />
                     </Link>
                   </div>

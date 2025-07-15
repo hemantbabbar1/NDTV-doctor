@@ -1,12 +1,12 @@
 import React from "react";
-import "../../../src/styles/css/elements/footer.css";
+import "../../../../src/styles/css/elements/footer.css";
 import Footer_left from "./Footer_left";
 import Footer_right from "./Footer_right";
 
 const Footer = () => {
   return (
     <>
-      <footer className="FtrWdg ftr ftr- stk">
+      <footer className="FtrWdg ftr ftr-stk">
         <div className="Ftr_wr">
           <div className="vjl-cntr">
             <div className="vjl-row">

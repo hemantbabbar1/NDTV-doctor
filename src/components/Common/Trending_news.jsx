@@ -24,13 +24,13 @@ const Trending_news = () => {
             {trendingArticles.map((article, idx) => (
               <li className="s-ls_li" key={article.id || idx}>
                 <div className="crd_cat">{article.category}</div>
-                <a
+                <Link
                   href={article.link}
                   title="{article.link}"
                   className="s-ls_lnk"
                 >
                   <div className="s-ls_txt">{article.title}</div>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

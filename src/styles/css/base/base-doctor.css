@@ -71,7 +71,7 @@ body {
 
 .Bg-cl1 {
     background: var(--vj-bg-cl1);
-    padding: 60px 0;
+    padding: 60px 0 40px;
     color: #fff;
 }
 
@@ -96,6 +96,7 @@ body {
 .Bg-cl1 .crd_lnk:hover,
 .Bg-cl3 .tp-ttl1,
 .Bg-cl3 .crd_cat-lk,
+.Bg-cl3 .tp-ttl-lnk,
 .Bg-cl3 .crd_lnk,
 .Bg-cl3 .crd_lnk:hover {
     color: #fff;
@@ -186,7 +187,7 @@ body {
     padding: 0;
     display: inline-block;
     /* width: 100%; */
-    font-size: 16px;
+    font-size: 14px;
     line-height: 16px;
     color: #000;
 }
@@ -201,6 +202,12 @@ body {
 .m-nv_ul {
     margin-left: 30px
 }
+
+
+
+
+
+
 
 
 

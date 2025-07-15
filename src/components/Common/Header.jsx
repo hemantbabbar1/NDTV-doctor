@@ -1,9 +1,9 @@
 import React from "react";
-import Logo from "./Logo";
-import Navigation from "./Navigation";
-import Header_Right from "./Header_Right";
-import Mobile_Subnav from "./Mobile_Subnav";
-import Humbernav from "./Humbernav";
+import Logo from "./global_elements/Logo";
+import Navigation from "./global_elements/Navigation.jsx";
+import Header_Right from "./global_elements/Header_Right";
+import Mobile_Subnav from "./global_elements/Mobile_Subnav";
+import Humbernav from "./global_elements/Humbernav";
 
 const Header = () => {
   return (

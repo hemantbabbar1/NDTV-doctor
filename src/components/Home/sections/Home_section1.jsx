@@ -3,12 +3,9 @@
 import React from "react";
 import "@/src/styles/css/elements/find-health-solution.css";
 import Title1 from "@/src/components/Home/Title1";
+import Link from "next/link"; // Added Link component for internal navigation
 
-// Importing card data from JSON file
-import { useEffect, useState } from "react";
-import axios from "axios";
-
-const Find_Health = () => {
+const Find_Health = ({ cardData, error }) => {
   const alphabet = [
     "A",
     "B",
@@ -23,7 +20,7 @@ const Find_Health = () => {
     "K",
     "L",
     "M",
-    "N",
+    "N",  
     "O",
     "P",
     "Q",
@@ -38,18 +35,11 @@ const Find_Health = () => {
     "Z",
   ];
 
-  const [cardData, setCardData] = useState([]);
-  useEffect(() => {
-    const fetchCards = async () => {
-      try {
-        const res = await axios.get("/data/healthCards.json");
-        setCardData(res.data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    fetchCards();
-  }, []);
+  if (error) {
+    return (
+      <div style={{ color: "red", padding: "20px" }}>Error: {error}</div>
+    );
+  }
 
   return (
     <>
@@ -127,9 +117,9 @@ const Find_Health = () => {
                 </div>
 
                 <div className="FdHhCrd_ul">
-                  {cardData.map((card) => (
+                  {cardData && cardData.map((card) => (
                     <div className="FdHhCrd_li" key={card.title}>
-                      <a className="FdHhSl_crd" href={card.link}>
+                      <Link className="FdHhSl_crd" href={card.link}>
                         <div className="FdHhSl_crd-icn">
                           <svg
                             className={`vj_icn ${card.icon.replace("#", "")}`}
@@ -138,17 +128,17 @@ const Find_Health = () => {
                           </svg>
                         </div>
                         <div className="FdHhSl_crd-ttl">{card.title}</div>
-                      </a>
+                      </Link>
                     </div>
                   ))}
 
                   <div className="FdHhCrd_li">
-                    <a className="FdHhSl_crd FdHhSl_crd-all" href="#">
+                    <Link className="FdHhSl_crd FdHhSl_crd-all" href="#">
                       See All{" "}
                       <svg className="vj_icn vj-icn-arrow-left">
                         <use xlinkHref="#vj-icn-arrow-left"></use>
                       </svg>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

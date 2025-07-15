@@ -34,8 +34,8 @@ const Home_atf_story = () => {
                       alt={mainStory.title}
                       width={594}
                       height={334}
-                      sizes="(max-width: 600px) 100vw, 594px"
-                      style={{ width: "100%", height: "auto" }}
+                      //sizes="(max-width: 600px) 100vw, 594px"
+                      //style={{ width: "100%", height: "auto" }}
                     />
                   )}
                 </Link>
@@ -78,8 +78,8 @@ const Home_atf_story = () => {
                           alt={mainStory1.title}
                           width={240}
                           height={180}
-                          sizes="(max-width: 600px) 100vw, 240px"
-                          style={{ width: "100%", height: "auto" }}
+                          //sizes="(max-width: 600px) 100vw, 240px"
+                          //style={{ width: "100%", height: "auto" }}
                         />
                       )}
                     </Link>
@@ -121,8 +121,8 @@ const Home_atf_story = () => {
                           alt={mainStory2.title}
                           width={240}
                           height={180}
-                          sizes="(max-width: 600px) 100vw, 240px"
-                          style={{ width: "100%", height: "auto" }}
+                          //sizes="(max-width: 600px) 100vw, 240px"
+                          //style={{ width: "100%", height: "auto" }}
                         />
                       )}
                     </div>

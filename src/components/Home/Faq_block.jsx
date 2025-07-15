@@ -1,38 +1,24 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Title1 from "./Title1";
 import Ask_doctor from "./Ask_doctor";
 
-const Home_faq_block = () => {
-  const [faqs, setFaqs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+// This component now receives 'faqs' and 'error' as props
+const Home_faq_block = ({ faqs, error }) => {
+  if (error) {
+    return <div style={{ color: "red", padding: "20px" }}>Error: {error}</div>;
+  }
 
-  useEffect(() => {
-    const fetchFaqs = async () => {
-      try {
-        const res = await fetch("/data/faqs.json"); // API endpoint for FAQs
-        if (!res.ok) throw new Error("Failed to fetch FAQs");
-        const data = await res.json();
-        setFaqs(data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchFaqs();
-  }, []);
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div style={{ color: "red" }}>Error: {error}</div>;
+  if (!faqs || faqs.length === 0) {
+    return <div style={{ padding: "20px" }}>No FAQs available.</div>;
+  }
 
   return (
     <>
       <div className="vjl-row">
         <div className="vjl-md-12">
-          <Title1 title="FAQs - The Answers You Need1" link="/faq" />
+          <Title1 title="FAQs - The Answers You Need" link="/faq" />
           <a className="tp_arrBx" href="/faq">
             <svg className="vj_icn vj-icn-arrow-left">
               <use xlinkHref="#vj-icn-arrow-left"></use>
@@ -81,7 +67,6 @@ const Home_faq_block = () => {
               </div>
             </div>
           </div>
-
           <Ask_doctor />
         </div>
       </div>

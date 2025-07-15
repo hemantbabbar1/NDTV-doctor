@@ -5411,7 +5411,7 @@ body.js-npop-frm {
 }
 
 .GlbNv1_arr-bk {
-    transform: rotate(180deg);
+    /* transform: rotate(180deg); */
     margin: 0 5px 0 0
 }
 

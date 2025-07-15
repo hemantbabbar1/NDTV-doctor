@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useFooterLinks } from "@/src/context/FooterLinksContext";
-import Footer_copyright from "./footer/Footer_copyright";
+import Footer_copyright from "./Footer_copyright";
 
 const Footer_right = () => {
   const { mainLinks, extraLinks, loading, error } = useFooterLinks();

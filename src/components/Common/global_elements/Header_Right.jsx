@@ -1,12 +1,12 @@
 import React from "react";
-import Global_Nav from "./Global_Nav";
 import Login_Btn from "./Login_Btn";
+import Global_Nav_server from "./Global_Nav_server";
 
 export const Header_Right = () => {
   return (
     <>
       <div className="mRgt_wr">
-        <Global_Nav />
+        <Global_Nav_server />
         <Login_Btn />
       </div>
     </>

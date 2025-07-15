@@ -66,7 +66,7 @@
     /* width: 100%; */
     margin: 0;
     padding: 0;
-    max-width: 1100px;
+    /* max-width: 1100px; */
     width: calc(100% + 30px);
     margin: 0 0 0 -15px;
     padding: 0 0 0 15px;
