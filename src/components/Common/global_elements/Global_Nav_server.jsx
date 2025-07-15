@@ -3,7 +3,7 @@ import Global_Nav from "./Global_Nav";
 import axios from "axios";
 
 // API base URL to environment variable
-const API_BASE_URL = process.env.API_BASE_URL;
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 // This is a Server Component, so it doesn't have "use client"
 const Global_Nav_server = async () => {

@@ -1,11 +1,10 @@
+import React from "react";
+import axios from "axios";
+import { ArticlesProvider } from "@/src/context/ArticlesContext";
+import Home_section3 from "./Home_section3";
 
-import React from 'react';
-import axios from 'axios';
-import { ArticlesProvider } from '@/src/context/ArticlesContext';
-import Home_section3 from './Home_section3';
-
-// API base URL to environment variable 
-const API_BASE_URL = process.env.API_BASE_URL;
+// API base URL to environment variable
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 const Home_section3_server = async () => {
   let allArticles = [];
@@ -13,7 +12,9 @@ const Home_section3_server = async () => {
 
   try {
     // Fetch data directly on the server
-    const res = await axios.get(`${API_BASE_URL}/data/Fitness-excericise-top-stories.json`);
+    const res = await axios.get(
+      `${API_BASE_URL}/data/Fitness-excericise-top-stories.json`
+    );
     allArticles = res.data.results;
     //onsole.log("Articles data fetched on server.");
   } catch (err) {

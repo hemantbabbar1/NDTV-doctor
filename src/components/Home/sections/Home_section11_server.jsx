@@ -2,7 +2,7 @@ import axios from "axios";
 import Home_section11 from "./Home_section11";
 
 // API base URL to environment variable
-const API_BASE_URL = process.env.API_BASE_URL;
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 // This function fetches the data on the server
 async function getWebstory() {

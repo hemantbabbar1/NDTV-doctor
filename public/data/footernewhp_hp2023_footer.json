@@ -1,0 +1,67 @@
+[
+  {
+    "Link": "http://www.ndtv.com/",
+    "Slug": null,
+    "Title": "News"
+  },
+  {
+    "Link": "https://ndtv.in/",
+    "Slug": null,
+    "Title": "Hindi"
+  },
+  {
+    "Link": "https://www.ndtv.com/business",
+    "Slug": null,
+    "Title": "Business"
+  },
+  {
+    "Link": "https://www.ndtv.com/entertainment",
+    "Slug": null,
+    "Title": "Movies"
+  },
+  {
+    "Link": "https://sports.ndtv.com/cricket",
+    "Slug": null,
+    "Title": "Cricket"
+  },
+  {
+    "Link": "https://food.ndtv.com/",
+    "Slug": null,
+    "Title": "Food"
+  },
+  {
+    "Link": "https://www.gadgets360.com/",
+    "Slug": null,
+    "Title": "Tech"
+  },
+  {
+    "Link": "https://www.ndtv.com/education",
+    "Slug": null,
+    "Title": "Education"
+  },
+  {
+    "Link": "https://doctor.ndtv.com/",
+    "Slug": null,
+    "Title": "Health"
+  },
+  {
+    "Link": "https://www.ndtv.com/lifestyle",
+    "Slug": null,
+    "Title": "Lifestyle"
+  },
+  {
+    "Link": "https://marathi.ndtv.com/",
+    "Slug": null,
+    "Title": "Marathi"
+  },
+  {
+    "Link": "https://rajasthan.ndtv.in/",
+    "Slug": null,
+    "Title": "Rajasthan"
+  },
+  {
+    "Link": "https://mpcg.ndtv.in/",
+    "Slug": null,
+    "Title": "MPCG"
+  }
+]

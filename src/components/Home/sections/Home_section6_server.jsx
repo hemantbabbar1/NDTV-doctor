@@ -1,16 +1,18 @@
-import Home_section6 from './Home_section6';
-import axios from 'axios';
+import Home_section6 from "./Home_section6";
+import axios from "axios";
 
-// API base URL to environment variable 
-const API_BASE_URL = process.env.API_BASE_URL;
+// API base URL to environment variable
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 async function getArticles() {
   // Use the full URL for your local server
-  const res = await axios.get(`${API_BASE_URL}/data/Fitness-excericise-top-stories.json`);
+  const res = await axios.get(
+    `${API_BASE_URL}/data/Fitness-excericise-top-stories.json`
+  );
   return res.data.results;
 }
 
-const Home_section6_server = async () => { 
+const Home_section6_server = async () => {
   let articles = [];
   let error = null;
 
