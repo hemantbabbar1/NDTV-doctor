@@ -21,6 +21,24 @@ const inter = Inter({
   variable: "--ff-one",
 });
 
+// पूरी साइट को noindex करने के लिए यह metadata ऑब्जेक्ट एक्सपोर्ट करें
+export const metadata = {
+  robots: {
+    index: false,
+    follow: false,
+
+    // googleBot: {
+    //   index: false,
+    //   follow: false,
+    //   noimageindex: true,
+    //   'max-snippet': -1,
+    // },
+  },
+
+  // title: "Your Site Title (NoIndex)",
+  // description: "This site is currently not intended for search engine indexing.",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
