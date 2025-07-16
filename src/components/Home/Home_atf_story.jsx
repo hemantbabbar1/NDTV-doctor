@@ -1,13 +1,9 @@
 import React from "react";
 import HmCrd_C from "./HmCrd_C";
 import Image from "next/image";
-// Context API for Articles
-import { useArticles } from "@/src/context/ArticlesContext";
 import Link from "next/link";
 
-const Home_atf_story = () => {
-  const { articles } = useArticles();
-
+const Home_atf_story = ({ articles }) => {
   if (!articles || articles.length === 0) return null;
 
   // Main story (first article)
@@ -34,6 +30,7 @@ const Home_atf_story = () => {
                       alt={mainStory.title}
                       width={594}
                       height={334}
+                      fetchPriority="high"
                       //sizes="(max-width: 600px) 100vw, 594px"
                       //style={{ width: "100%", height: "auto" }}
                     />
@@ -78,6 +75,7 @@ const Home_atf_story = () => {
                           alt={mainStory1.title}
                           width={240}
                           height={180}
+                          fetchPriority="high"
                           //sizes="(max-width: 600px) 100vw, 240px"
                           //style={{ width: "100%", height: "auto" }}
                         />
@@ -121,6 +119,7 @@ const Home_atf_story = () => {
                           alt={mainStory2.title}
                           width={240}
                           height={180}
+                          fetchPriority="high"
                           //sizes="(max-width: 600px) 100vw, 240px"
                           //style={{ width: "100%", height: "auto" }}
                         />

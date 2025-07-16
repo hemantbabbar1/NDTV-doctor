@@ -10,9 +10,10 @@ import "../styles/css/base/home-header.css";
 import "../styles/css/base/base-doctor.css";
 
 // Context API for Articles for centralized state management
-import { ArticlesProvider } from "@/src/context/ArticlesContext";
-import { FooterLinksProvider } from "@/src/context/FooterLinksContext";
+
 import Global_elements from "../components/Common/global_elements/Global_elements";
+import ArticlesContext_server from "../context/ArticlesContext_server";
+import FooterLinksContext_server from "../context/FooterLinksContext_server";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,10 +27,10 @@ export default function RootLayout({ children }) {
       <body cz-shortcut-listen="true" className="">
         <Atf_Symbols />
         <Header />
-        <ArticlesProvider>{children}</ArticlesProvider>
-        <FooterLinksProvider>
+        <ArticlesContext_server>{children}</ArticlesContext_server>
+        <FooterLinksContext_server>
           <Footer />
-        </FooterLinksProvider>
+        </FooterLinksContext_server>
         <Global_elements />
       </body>
     </html>

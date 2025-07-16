@@ -1,32 +1,24 @@
-import React from "react";
-import axios from "axios";
-import { ArticlesProvider } from "@/src/context/ArticlesContext";
-import Home_section3 from "./Home_section3";
+// src/components/Home/sections/Home_section3_server.jsx
+// This is a Server Component.
 
-// API base URL to environment variable
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+import React from "react";
+import Home_section3 from "./Home_section3"; // Assuming Home_section3 might be a Client Component or just renders content
+
+// If Home_section3_server needs to fetch its OWN specific data, do it here
+// async function getSection3SpecificData() {
+//   // ... fetch data for this section ...
+// }
 
 const Home_section3_server = async () => {
-  let allArticles = [];
-  let error = null;
+  // If you need to fetch specific data for THIS section (Home_section3)
+  // const section3Data = await getSection3SpecificData();
 
-  try {
-    // Fetch data directly on the server
-    const res = await axios.get(
-      `${API_BASE_URL}/data/Fitness-excericise-top-stories.json`
-    );
-    allArticles = res.data.results;
-    //onsole.log("Articles data fetched on server.");
-  } catch (err) {
-    //console.error("Error fetching articles:", err.message);
-    error = "Failed to load articles.";
-  }
-
-  // Pass the fetched data to the Client-side Context Provider
+  // Do NOT render ArticlesProvider here, as it's already provided higher up in layout.jsx
   return (
-    <ArticlesProvider initialArticles={allArticles}>
-      <Home_section3 />
-    </ArticlesProvider>
+    <>
+      {/* If Home_section3 needs section-specific data, pass it as props */}
+      <Home_section3 /* sectionData={section3Data} */ />
+    </>
   );
 };
 

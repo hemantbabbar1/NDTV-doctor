@@ -1,10 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { useArticles } from "@/src/context/ArticlesContext";
 import Link from "next/link";
 
-const HmCrd_C = () => {
-  const { articles } = useArticles();
+const HmCrd_C = ({ articles }) => {
   if (!articles || articles.length < 10) return null;
 
   // Get articles from index 4 to 10 (inclusive of 4, exclusive of 10)

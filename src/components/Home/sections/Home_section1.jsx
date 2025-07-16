@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import React from "react";
 import "@/src/styles/css/elements/find-health-solution.css";
@@ -20,7 +20,7 @@ const Find_Health = ({ cardData, error }) => {
     "K",
     "L",
     "M",
-    "N",  
+    "N",
     "O",
     "P",
     "Q",
@@ -36,9 +36,7 @@ const Find_Health = ({ cardData, error }) => {
   ];
 
   if (error) {
-    return (
-      <div style={{ color: "red", padding: "20px" }}>Error: {error}</div>
-    );
+    return <div style={{ color: "red", padding: "20px" }}>Error: {error}</div>;
   }
 
   return (
@@ -117,20 +115,21 @@ const Find_Health = ({ cardData, error }) => {
                 </div>
 
                 <div className="FdHhCrd_ul">
-                  {cardData && cardData.map((card) => (
-                    <div className="FdHhCrd_li" key={card.title}>
-                      <Link className="FdHhSl_crd" href={card.link}>
-                        <div className="FdHhSl_crd-icn">
-                          <svg
-                            className={`vj_icn ${card.icon.replace("#", "")}`}
-                          >
-                            <use href={card.icon}></use>
-                          </svg>
-                        </div>
-                        <div className="FdHhSl_crd-ttl">{card.title}</div>
-                      </Link>
-                    </div>
-                  ))}
+                  {cardData &&
+                    cardData.map((card) => (
+                      <div className="FdHhCrd_li" key={card.title}>
+                        <Link className="FdHhSl_crd" href={card.link}>
+                          <div className="FdHhSl_crd-icn">
+                            <svg
+                              className={`vj_icn ${card.icon.replace("#", "")}`}
+                            >
+                              <use href={card.icon}></use>
+                            </svg>
+                          </div>
+                          <div className="FdHhSl_crd-ttl">{card.title}</div>
+                        </Link>
+                      </div>
+                    ))}
 
                   <div className="FdHhCrd_li">
                     <Link className="FdHhSl_crd FdHhSl_crd-all" href="#">

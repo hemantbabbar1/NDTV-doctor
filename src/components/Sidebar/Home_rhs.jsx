@@ -70,7 +70,12 @@ const Home_rhs = () => {
                 Metrics Instantly!
               </div>
               <div className="ClcMtr_img">
-                <img src="https://drop.ndtv.com/test/hk-ndtv/Ndtv-doctor/v1.8/images/doctor/metrics.png" />
+                <img
+                  src="https://drop.ndtv.com/test/hk-ndtv/Ndtv-doctor/v1.8/images/doctor/metrics.png"
+                  alt="img"
+                  width={91}
+                  height={79}
+                />
               </div>
             </div>
           </div>

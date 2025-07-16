@@ -1,0 +1,18 @@
+@import "../grid/main-card-grid1.css";
+@import "../card-widget/lines-spacing-padding.css";
+@import "../elements/tittle-tabs-color.css";
+@import "../elements/list-news.css";
+@import "../cards/cards-hm.css";
+@import "../cards/cards-content.css";
+@import "../cards/doctor-cards-content.css";
+@import "../cards/card-b.css";
+@import "../cards/card-c.css";
+@import "../cards/card-c_v1.css";
+@import "../cards/card-c_v2.css";
+@import "../cards/card-d.css";
+@import "../cards/card-d_v1.css";
+@import "../cards/card-h.css";
+@import "../cards/card-bt.css";
+@import "../cards/card-image-transition.css";
+@import "./home-edits.css"; /* For Same folder file */
+@import "../helper.css";

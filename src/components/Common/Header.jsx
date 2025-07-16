@@ -1,9 +1,9 @@
 import React from "react";
 import Logo from "./global_elements/Logo";
-import Navigation from "./global_elements/Navigation.jsx";
 import Header_Right from "./global_elements/Header_Right";
 import Mobile_Subnav from "./global_elements/Mobile_Subnav";
 import Humbernav from "./global_elements/Humbernav";
+import Navigation_server from "./global_elements/Navigation_server";
 
 const Header = () => {
   return (
@@ -15,7 +15,7 @@ const Header = () => {
               <div className="vjl-md-12">
                 <Humbernav />
                 <Logo />
-                <Navigation />
+                <Navigation_server />
                 <Header_Right />
               </div>
             </div>

@@ -17,7 +17,7 @@ const Home_section1_server = async () => {
     cardData = res.data;
     //console.log("Data fetched on server."); // Debug comment
   } catch (e) {
-    console.error("Error fetching data:", e);
+    //console.error("Error fetching data:", e);
     error = "Failed to load data.";
   }
 

@@ -1,29 +1,28 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
-import axios from "axios";
 
-export const Mobile_Subnav = () => {
-  const [navLinks, setNavLinks] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+export const Mobile_Subnav = ({ menuLinks, error }) => {
+  // const [navLinks, setNavLinks] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchNavLinks = async () => {
-      try {
-        const res = await axios.get("/data/navLinks.json");
-        setNavLinks(res.data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchNavLinks();
-  }, []);
+  // useEffect(() => {
+  //   const fetchNavLinks = async () => {
+  //     try {
+  //       const res = await axios.get("/data/navLinks.json");
+  //       setNavLinks(res.data);
+  //     } catch (err) {
+  //       setError(err.message);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+  //   fetchNavLinks();
+  // }, []);
 
-  if (loading) return <div>Loading...</div>;
+  // // if (loading) return <div>Loading...</div>;
   if (error) return <div style={{ color: "red" }}>Error: {error}</div>;
 
   return (
@@ -36,18 +35,20 @@ export const Mobile_Subnav = () => {
                 <div className="MSub-nav_wr">
                   <div className="hr-scroll MSub-nav_hr-scr">
                     <ul className="hr-scroll__content MSub-nv_ul">
-                      {navLinks.map((link) => (
-                        <li className="MSub-nv_li" key={link.id}>
-                          <Link
-                            className="MSub-nav_lnk"
-                            alt={link.name}
-                            title={link.name}
-                            href={link.path}
-                          >
-                            {link.name}
-                          </Link>
-                        </li>
-                      ))}
+                      {menuLinks &&
+                        Array.isArray(menuLinks) &&
+                        menuLinks.map((link) => (
+                          <li className="MSub-nv_li" key={link.id}>
+                            <Link
+                              className="MSub-nav_lnk"
+                              alt={link.name}
+                              title={link.name}
+                              href={link.path}
+                            >
+                              {link.name}
+                            </Link>
+                          </li>
+                        ))}
                     </ul>
                   </div>
                 </div>
