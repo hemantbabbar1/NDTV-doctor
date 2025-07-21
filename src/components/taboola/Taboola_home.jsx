@@ -1,11 +1,12 @@
-import React from "react";
+"use client";
+import React, { forwardRef } from "react";
 import ScrollClassToggler from "../Common/ScrollClassToggler";
 
-const Taboola_home = () => {
+const Taboola_home = forwardRef((props, ref) => {
   return (
     <>
       <ScrollClassToggler>
-        <section className="section_one Js-Tbl_ad-ftr">
+        <section className="section_one Js-Tbl_ad-ftr" ref={ref}>
           <div className="vjl-cntr">
             <div className="vjl-row">
               <div className="vjl-sm-12 vjl-md-12 add_dxt_non">
@@ -414,6 +415,6 @@ const Taboola_home = () => {
       </ScrollClassToggler>
     </>
   );
-};
+});
 
 export default Taboola_home;

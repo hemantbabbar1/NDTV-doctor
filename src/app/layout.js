@@ -6,8 +6,7 @@ import Footer from "../components/Common/footer/Footer";
 
 // Global CSS imports
 import "../styles/css/taboola.css";
-import "../styles/css/base/home-header.css";
-import "../styles/css/base/base-doctor.css";
+import "../styles/css/helper.css";
 
 // Context API for Articles for centralized state management
 

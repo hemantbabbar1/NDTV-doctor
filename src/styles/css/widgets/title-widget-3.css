@@ -1,0 +1,67 @@
+/*--====== Light ======--*/
+:root {
+    --vj-cl-Dcttl3-1: #E4F9FC;
+    --vj-cl-Dcttl3-2: #fff;
+    --vj-cl-Dcttl3-3: #00000099;
+
+
+
+
+}
+
+/*--====== Dark ======--*/
+:root .day_night {}
+
+/*--====== Dark Mode ======--*/
+@media (prefers-color-scheme:dark) {
+
+    /*--====== Dark ======--*/
+    :root {
+        --vj-cl-Dcttl3-1: #222222;
+        --vj-cl-Dcttl3-2: #393a3b;
+        --vj-cl-Dcttl3-3: #bdb9b9;
+    }
+
+    /*--====== Light ======--*/
+    :root .day_night {}
+}
+
+
+.Dcttl3_wr {
+    display: inline-block;
+    float: left;
+    margin: 0 0 20px 0;
+    padding: 0;
+    width: 100%;
+}
+
+.Dcttl3_cn {
+    /* align-items: center; */
+    /* background-color: var(--vj-cl-Dcttl3-1); */
+    display: flex;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.Dcttl3_ttl {
+    font-size: 24px;
+    color: var(--vj-cl-dr);
+    margin: 0;
+    padding: 0
+}
+
+
+@media(min-width:992px) {
+
+    .Dcttl3_cn {
+        flex-direction: row;
+        align-items: center
+    }
+
+
+}

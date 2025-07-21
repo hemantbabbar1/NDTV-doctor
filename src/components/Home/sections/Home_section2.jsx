@@ -3,8 +3,6 @@ import Trending_news from "../../Common/Trending_news";
 import "../../../styles/css/elements/doctor-faq.css";
 import Home_faq_block_server from "../Faq_block_server";
 
-<link rel="stylesheet" href="css/elements/doctor-faq.css"></link>;
-
 const Home_faq = () => {
   return (
     <>

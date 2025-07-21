@@ -20,7 +20,7 @@ const Atf_Sections = ({ articles, error }) => {
   if (error) {
     return (
       <section className="section mt-5">
-        <div className="vjl-cntr text-center text-red-600">
+        <div className="vjl-cntr text-center">
           <p>Error: {error}</p>
         </div>
       </section>

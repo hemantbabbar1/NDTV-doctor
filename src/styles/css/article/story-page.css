@@ -1,0 +1,505 @@
+/*--====== Light ======--*/
+:root {
+    --vj-cl-spgr1: linear-gradient(120deg, #def3ff 0%, #90d6ff 100%);
+    --vj-cl-spgr2: #FCF8ED;
+}
+
+
+/*--====== Dark ======--*/
+:root .day_night {
+    --vj-cl-spgr1: linear-gradient(120deg, #2757c3 0%, #4f21cd 100%);
+}
+
+/*--====== Dark Mode ======--*/
+@media (prefers-color-scheme:dark) {
+
+    /*--====== Dark ======--*/
+    :root {
+        --vj-cl-spgr1: linear-gradient(120deg, #2757c3 0%, #4f21cd 100%);
+        --vj-cl-spgr2: #1c1c1d;
+    }
+
+    /*--====== Light ======--*/
+    :root .day_night {
+        --vj-cl-spgr1: linear-gradient(120deg, #def3ff 0%, #90d6ff 100%);
+
+    }
+}
+
+
+
+
+
+
+
+.sp-cn ul {
+    margin-bottom: 15px;
+    padding-left: 15px;
+}
+
+.sp-cn ul li {
+    list-style-type: disc;
+}
+
+.sp-cn ol {
+    list-style-type: decimal;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+.ins_instory_dv {
+    display: inline-block;
+    float: left;
+    margin-bottom: 24px;
+    overflow: hidden;
+    width: 100%;
+}
+
+p.ins_instory_dv_caption {
+    border-bottom: 1px solid var(--vj-cl-rg1);
+    color: var(--vj-cl-dr5);
+    display: flex;
+    float: left;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: -12px;
+    margin-bottom: 18px;
+    padding: 0 0 9px;
+    width: 100%;
+}
+
+.sp_b:after {
+    box-sizing: content-box;
+    content: '';
+    display: block;
+    height: 1px;
+    margin: 10px 0 0 0;
+}
+
+.sp_b:after {
+    border-bottom: 1px solid var(--vj-cl-rg3);
+}
+
+.sp_cap {
+    color: var(--vj-cl-dr7);
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin-bottom: 0;
+    padding: 9px 0 0;
+    width: 100%;
+}
+
+.sp_cred {
+    display: inline-block;
+    font-size: 11px;
+    line-height: 14px;
+    float: left;
+    text-align: right;
+    margin: -3px 0 0 0;
+    width: 100%;
+}
+
+
+.img-gr .sp_cred {
+    color: #e4e4e4;
+    position: absolute;
+    font-size: 12px;
+    bottom: 0;
+    right: 0;
+    padding: 16px 20px;
+    width: auto;
+    z-index: 2;
+}
+
+.img-gr .sp_cred:after {
+    background: #00000080;
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    filter: blur(18px);
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+
+
+/*.sp_txt a,*/
+.sp_lnk {
+    color: var(--vj-cl-rg5);
+    text-decoration: none;
+    border-bottom: 2px solid var(--vj-cl-rg8);
+}
+
+
+.sp_txt a {
+    border-bottom: 2px solid var(--vj-cl-rg8);
+}
+
+.sp_txt h1,
+.sp_txt h2,
+.sp_txt h3,
+.sp_txt h4,
+.sp_txt h5 {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 766px) {
+
+    .sp_txt h1,
+    .sp_txt h2,
+    .sp_txt h3,
+    .sp_txt h4,
+    .sp_txt h5 {
+        margin-bottom: 8px;
+    }
+
+}
+
+
+.sp_txt h2 {
+    color: var(--vj-cl-dr2);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 29px;
+}
+
+.sp_txt h3 {
+    color: var(--vj-cl-dr2);
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.sp_txt h3 strong {
+    font-weight: 700;
+}
+
+
+
+.sp_txt h2 a,
+.sp_txt h3 a {
+    border: 0 none;
+}
+
+
+.sp_lnk2,
+.sp_txt .sp_lnk2 {
+    border: 0 none;
+    color: var(--vj-cl-dr2);
+    text-decoration: none;
+    background-image: var(--vj-cl-spgr1);
+    background-repeat: no-repeat;
+    background-size: 100% 4px;
+    background-position: 0 100%;
+    transition: background-size 0.25s ease-in;
+}
+
+.sp_lnk2:hover {
+    background-size: 100% 100%;
+}
+
+
+.place_cont {
+    display: inline;
+    float: left;
+    margin-right: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Old ul li ol li starts*/
+.blog-lst__feed ul {
+    list-style: circle;
+    padding-left: 20px;
+}
+
+.ins_storybody ol {
+    margin-left: 20px;
+}
+
+.ins_storybody ul li {
+    list-style: disc;
+    margin-bottom: 10px;
+}
+
+.ins_storybody ol li {
+    list-style: decimal;
+    margin-bottom: 10px;
+}
+
+
+.story__content-main ul {
+    list-style-type: disc;
+    padding: 0 0 0 20px;
+    margin-bottom: 30px;
+}
+
+.story__content-main>ol {
+    list-style: decimal;
+    margin: 15px 0px 0px 20px;
+}
+
+.story__content-main>ol li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+/*Old ul li ol li end*/
+
+
+
+
+
+
+
+
+.sp_only-ul-ol ul,
+.sp_only-ul-ol ol {
+    display: inline-block;
+    float: left;
+    padding-left: 0;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.sp_only-ul-ol ul li {
+    display: inline-block;
+    float: left;
+    line-height: 25px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.sp_only-ul-ol ul li:last-child {
+    margin-bottom: 0;
+}
+
+.sp_only-ul-ol ul li::before {
+    content: "";
+    border: 2px solid #4689e2;
+    border-radius: 30px;
+    height: 8px;
+    left: 0;
+    position: absolute;
+    width: 8px;
+    top: 8px;
+}
+
+.sp_only-ul-ol ol {
+    counter-reset: li;
+}
+
+.sp_only-ul-ol ol li {
+    list-style: none;
+    counter-increment: li;
+    line-height: 27px;
+    padding-left: 22px;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.sp_only-ul-ol ol li:last-child {
+    margin-bottom: 0;
+}
+
+.sp_only-ul-ol ol li::before {
+    content: counter(li) ".";
+    color: #4789e2;
+    display: inline-block;
+    font-weight: 500;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+
+
+
+
+
+
+.webstry_wrp,
+.ArtWeSt_wg1 {
+    display: inline-block;
+    width: 100%;
+}
+
+.webstory_styl1_C,
+.webstory_styl1_cnt,
+.ArtWeSt_wg1-ctr {
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+.webstry_wrp a.webstry_link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: block;
+    background: transparent;
+}
+
+
+
+
+
+
+
+.stk-t_bg {
+    background: #000000;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity .6s, visibility .6s;
+    -moz-transition: opacity .6s, visibility .6s;
+    transition: opacity .6s, visibility .6s;
+}
+
+.j-stk-dn .stk-t_bg {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+
+
+@media (max-width: 992px) {
+
+    /*Social icon tooltip first and last child Starts*/
+    .pst_icn-btn .ss-lk:last-child.ttp .tip.on-bottom {
+        left: auto;
+        right: 0;
+        margin: 0;
+    }
+
+    .pst_icn-btn .ss-lk:last-child.ttp .tip.on-bottom:before,
+    .pst_icn-btn .ss-lk:last-child.ttp .tip.on-bottom:after {
+        right: 0;
+        margin: 0 10px 0 0;
+        left: auto;
+    }
+
+    /*Social icon tooltip first and last child Ends*/
+}
+
+
+
+
+.DisMsg_wr {
+    background-color: var(--vj-cl-spgr2);
+    display: inline-block;
+    width: 100%;
+    float: left;
+    padding: 18px;
+    border-radius: 2px;
+    line-height: 25px;
+    font-style: italic;
+    letter-spacing: 0.3px;
+    margin: 5px 0 20px 0;
+    /* color: #444242; */
+    font-size: 15px;
+}
+
+.DisMsg_ttl {
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+iframe[src*=youtube],
+iframe[src*="https://ndtv.in/video/"],
+iframe[src*="https://ndtv.com/video/"] {
+    height: 202px;
+    width: 360px;
+    display: block;
+}
+
+
+@media(min-width:700px) {
+
+    iframe[src*=youtube],
+    iframe[src*="https://ndtv.in/video/"],
+    iframe[src*="https://ndtv.com/video/"] {
+        height: 311px;
+        width: 553px;
+    }
+}
+
+
+@media(min-width:1200px) {
+
+    iframe[src*=youtube],
+    iframe[src*="https://ndtv.in/video/"],
+    iframe[src*="https://ndtv.com/video/"] {
+        height: 300px;
+        width: 533px;
+    }
+}
+
+@media(min-width:1330px) {
+
+    iframe[src*=youtube],
+    iframe[src*="https://ndtv.in/video/"],
+    iframe[src*="https://ndtv.com/video/"] {
+        height: 373px;
+        width: 663px;
+    }
+}
+
+@media(min-width:1360px) {
+
+    iframe[src*=youtube],
+    iframe[src*="https://ndtv.in/video/"],
+    iframe[src*="https://ndtv.com/video/"] {
+        height: 390px;
+        width: 693px;
+    }
+}
+
+@media(min-width:1400px) {
+
+    iframe[src*=youtube],
+    iframe[src*="https://ndtv.in/video/"],
+    iframe[src*="https://ndtv.com/video/"] {
+        height: 432px;
+        width: 100%;
+    }
+}
