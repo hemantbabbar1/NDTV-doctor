@@ -4,7 +4,7 @@ import Link from "next/link";
 const Global_Nav_App = () => {
   return (
     <>
-      <div className="GlbNv_DwnLdApp mb-20">
+      <div className="GlbNv_DwnLdApp mb-30">
         <div className="dd-nav_in-tl GlbNvDrp_ttl">
           <Link
             className="dd-nav_in-tl-lk GlbNvDrp_ttl-lk"

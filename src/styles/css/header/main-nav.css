@@ -1,0 +1,382 @@
+
+.m-nv {
+    /* background-color: var(--vj-cl-lg); */
+    /* border-bottom: 1px solid var(--vj-cl-Mnbg2); */
+    display: inline-block;
+    float: left;
+    top: 0;
+    /* position: -webkit-sticky;
+    position: sticky; */
+    position: relative;
+    width: 100%;
+    z-index: 991;
+}
+
+
+.stk-t_wr:after {
+    border: solid transparent;
+    border-width: 6px;
+    border-top-color: #000000;
+    bottom: -13px;
+    content:  "";
+    height: 6px;
+    left: 18px;
+    position: absolute;
+    width: 6px;
+    z-index: 9;
+}
+.nav_stk .m-nv:before {
+    /* box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2); */
+}
+.m-nv_ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    float: left;
+}
+.m-nv_li {
+    display: inline-block;
+    padding-right: 22px;
+    float: left;
+}
+.m-nv_lnk {
+    color: #ffffff;
+    display: inline-block;
+    font-family: var(--ff-two);
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    line-height: 45px;
+    text-transform: capitalize;
+    margin: 0 0 0 0;
+    cursor: pointer;
+    padding: 5px 4px;
+}
+
+
+.m-nv_lnk.dd-nav_act {
+    color: var(--vj-cl-mtx);
+}
+
+.dd-nav_one .m-nv_lnk {
+    line-height: 32px;
+}
+
+
+.m-nv_hin .m-nv_lnk {
+    font-family: var(--ff-five);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 5px;
+}
+
+
+
+
+.m-nv_lbl {
+    background-color: #ca2525;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.17);
+    color: #ffffff;
+    display: inline-block;
+    font-size: 8px;
+    font-weight: 600;
+    line-height: 10px;
+    min-height: 12px;
+    padding: 1px 4px 0;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.m-nv_lbl:after {
+    top: 100%;
+    left: 10px;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border: solid transparent;
+    border-top-color: #ca2525;
+    border-width: 4px;
+    margin-left: -4px;
+}
+
+
+.m-nv_li.dd-nav_hvr .dd-nav{
+    /* min-height: 268px; */
+}
+.t-icn-ltv.m-nv_li.dd-nav_hvr .dd-nav {
+    min-height: auto;
+}
+.dd-nav_hvr:hover > .m-nv_lnk, .m-nv_lnk:hover {
+    color: #ffffff;
+}
+.m-nv_lnk:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    height: 3px;
+    opacity: 0;
+    margin: auto;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+.dd-nav_hvr:hover > .m-nv_lnk:before, .m-nv_lnk:hover:before, .m-nv_lnk:focus:before {
+    /* width: 100%; */
+    opacity: 1;
+}
+.m-nv_act {
+}
+
+
+.m-nv_ul:hover .m-nv_li:not(:hover) {
+  opacity: 0.67;
+}
+.m-nv_li {
+  opacity: 1;
+  transition: 0.3s ease all;
+}
+.m-nv_li:hover {
+  opacity: 1;
+}
+
+.m-nv_li > .m-nv_drp-icn {
+    margin-left: -9px;
+    margin-right: 15px;
+}
+
+.m-nv_li > .m-nv_lbl {
+    right: 16px;
+}
+
+
+.m-nv_drp-icn {
+    color: var(--vj-cl-dr);
+    font-size: 10px;
+    margin-left: 6px;
+}
+.m-nv_clr .m-nv_lnk.dd-nav_act {
+    color: #ffffff;
+}
+.m-nv_clr .m-nv_lnk.dd-nav_act .m-nv_drp-icn {
+    color: var(--vj-cl-mtx);
+}
+.dd-nav_act:after {
+    background: #ffffff;
+    bottom: 0;
+    content: "";
+    height: 3px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+
+
+.vj_icn-nv {
+    opacity: 0.6;
+    font-size: 7px;
+    margin: 9px 0 0 6px;
+    position: absolute;
+}
+.t-icn-nv .dd-nav_ltv-ful {
+    background: var(--vj-cl-ot2);
+    color: #333;
+    max-width: 100%;
+    margin: 10px;
+    text-shadow: 0 0;
+}
+
+.t-icn-nv .dd-nav_ltv-ful:hover {
+    background: #fff5a0;
+    color: #333;
+}
+.m-nv_bkp {
+    height: 68px;
+    position: absolute;
+    width: 100%;
+}
+
+.j-stk-dn.j-stk-up .m-nv {
+    position:  fixed;
+    top:  0;
+    left:  0;
+    width: 100%;
+}
+
+.j-stk-dn.j-stk-up .m-nv_bkp {
+    position: relative;
+}
+
+
+
+
+
+
+.m-nv_li .crd-d_v1-li {
+    display: inline-block;
+    float: left;
+    padding: 0 8px;
+    width: 20%;
+}
+
+
+
+
+
+
+/*--====== Live TV Channels starts ======--*/
+.m-nv_clr .dd-nav.MnvLvCh_cnt {
+    background: #39404a;
+}
+.dd-nav_in.MnvLvCh_wr {
+    padding: 8px 8px;
+}
+
+.MnvLvCh_ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    float: left;
+    margin: 0 -3px;
+    justify-content: flex-start;
+}
+
+.MnvLvCh_li {
+    display: flex;
+    flex: 0 0 50%;
+    margin-bottom: 6px;
+    padding: 0 3px;
+    width: 50%;
+}
+
+.MnvLvCh_crd {
+    background: linear-gradient(to bottom, #444d5a 0%,#464c56 100%);
+    border: 1px solid #4c525c;
+    box-shadow: 0 1px 6px -2px #0000003b;
+    border-radius: 12px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 7px 0 10px;
+    min-height: 51px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.MnvLvCh_log-wr {
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 17px;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+.MnvLvCh_icn {
+    display: flex;
+    font-size: 14px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 74px;
+}
+.MnvLvCh_btn {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.MnvLvCh_btn:hover {
+    color: #fff;
+}
+
+.MnvLvCh_tx {
+    display: flex;
+    flex-direction: row;
+    float: left;
+    align-items: center;
+    justify-content: center;
+}
+.MnvLvCh_btn-ic {
+    align-items: center;
+    background: linear-gradient(to bottom, #e83e3e 0%,#e84343 100%);
+    border-radius: 40px;
+    color: #fff;
+    display: flex;
+    font-size: 10px;
+    height: 26px;
+    justify-content: center;
+    padding-left: 1px;
+    width: 26px;
+}
+/*--====== Live TV Channels Ends ======--*/
+
+
+
+
+/*.ltv__vd.img__full {
+    background-color: var(--vj-cl-dr);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+    font-size: 0;
+    position: relative;
+    width: 100%;
+}
+.ltv__lo {
+    background-image: url(../images/NDTV_24x7.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 126px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+
+.ltv__rpl {
+    display: inline-block;
+    position:  relative;
+    width: 100%;
+}
+
+.ltv__lk {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}*/
+
+
+@media (max-width: 420px) {
+    .m-nv {
+    min-height: 51px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+}
+
+
+@media (max-width: 1200px) {
+
+    .m-nv_lf {
+        display: none;
+    }
+}

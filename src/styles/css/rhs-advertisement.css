@@ -1,0 +1,29 @@
+.ads-wrp {
+  border: 1px solid var(--vj-cl-rg1);
+  border-radius: 6px;
+  display: inline-block;
+  float: left;
+  margin-bottom: 25px;
+  text-align: center;
+  /* overflow: hidden; */
+  position: relative;
+  width: 100%;
+  z-index: 7;
+}
+
+.ads-wrp_txt {
+  background-color: var(--vj-cl-lg1);
+  color: var(--vj-cl-dr1);
+  display: inline-block;
+  float: left;
+  font-size: 10px;
+  line-height: 16px;
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+}
+.ads-300x250 {
+  float: left;
+  height: 250px;
+  width: 300px;
+  overflow: hidden;
+}

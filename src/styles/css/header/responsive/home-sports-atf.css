@@ -1,0 +1,62 @@
+/*----====== Responsive Desktop BTF ======----*/
+
+
+@media (max-width: 767px) {
+    .res_crd-M {
+        display: inline-block;
+        float: left;
+        border-bottom: 1px solid var(--vj-cl-rg1);
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+        height: auto;
+    }
+    .res_crd-M .crd_img {
+        border-radius: 0;
+        margin-left: -15px;
+        width: calc(100% + 30px);
+    }
+    .res_crd-M .img-gr, .res_crd-M .crd_img-full {
+        border-radius: 0;
+    }
+    .res_crd-M .crd_ttl5 {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 33px;
+    }
+
+
+    .res_crd-1 {
+        display: inline-block;
+        float: left;
+        border-bottom: 1px solid var(--vj-cl-rg1);
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+        height: auto;
+    }
+    .res_crd-1 .crd_ttl {
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 27px;
+    }
+
+    .res-ls_br-bt {
+        border-bottom: 1px solid var(--vj-cl-rg3);
+        margin-bottom: 25px;
+    }
+
+
+    .res_lst {
+        display: inline-block;
+        float: left;
+        border-bottom: 1px solid var(--vj-cl-rg1);
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+        height: auto;
+    }
+
+    .res_bor-bt-non {
+        border-bottom: 0 solid var(--vj-cl-rg1);
+        margin-bottom: 16px;
+        padding-bottom: 0;
+    }
+}

@@ -1,10 +1,8 @@
 import React from "react";
 import axios from "axios";
 
-import "../../styles/css/widgets/title-widget-2.css";
-import "../../styles/css/widgets/title-widget-3.css";
-
-import "../../styles/css/cards/doctor-cards-content.css";
+// import "../../styles/css/widgets/title-widget-2.css";
+// import "../../styles/css/widgets/title-widget-3.css";
 
 import "../../styles/css/article/story-atf.css";
 import "../../styles/css/article/story-page.css";
@@ -13,15 +11,12 @@ import "../../styles/css/article/story-comments.css";
 import "../../styles/css/article/post-by.css";
 import "../../styles/css/article/elements.css";
 import "../../styles/css/article/ai-summary-accordion-1.css";
-
+import "../../styles/css/article/social.css";
 import "../../styles/css/article/copy-icon.css";
 import "../../styles/css/article/recommended-article.css";
 import "../../styles/css/article/article-featured-video.css";
 import "../../styles/css/article/tags.css";
 import "../../styles/css/article/published-drop.css";
-
-import "../../styles/css/widgets/seo-text-bottom.css";
-import "../../styles/css/helper.css";
 
 // Importing components
 import Article from "@/src/components/Common/Article/Article";

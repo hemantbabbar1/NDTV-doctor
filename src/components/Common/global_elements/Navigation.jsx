@@ -3,6 +3,11 @@
 import React from "react";
 import Link from "next/link";
 
+import "../../../styles/css/header/main-nav.css";
+import "../../../styles/css/header/main-nav-color.css";
+import "../../../styles/css/header/doctor/base/main-nav-color.css";
+import "../../../styles/css/header/list-dropdown.css";
+
 const Navigation = ({ menuLinks, error }) => {
   if (error) {
     return (

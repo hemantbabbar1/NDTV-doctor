@@ -1,5 +1,6 @@
 import React from "react";
 import Trending_news from "../Common/Trending_news";
+import "../../styles/css/rhs-advertisement.css";
 
 const Rhs_sidebar = () => {
   return (

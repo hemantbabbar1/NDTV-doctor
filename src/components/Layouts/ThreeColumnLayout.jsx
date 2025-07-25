@@ -2,6 +2,8 @@ import React from "react";
 import Taboola_Article from "../Taboola/Taboola_Article";
 import ScrollClassToggler from "../Common/ScrollClassToggler";
 
+import "../../styles/css/base/ndtv-col2.css";
+
 const ThreeColumnLayout = ({ children, leftSidebar, rightSidebar }) => {
   // checked That leftside bar is here or not.
   const hasLeftSidebar = !!leftSidebar;

@@ -1,0 +1,42 @@
+
+.m-nv_clr1 .stk-t_bg {
+    background: var(--vj-cl-Mnbg1);
+}
+.m-nv_clr .stk-t_wr:after {
+    border-top-color: var(--vj-cl-Mnbg1);
+}
+
+.red-tim {
+    margin-right: -53px;
+}
+
+
+
+
+.sp_txt h2 {
+    color: var(--vj-cl-dr2);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 29px;
+}
+.sp_txt h3 {
+    color: var(--vj-cl-dr2);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 29px;
+}
+
+.sp_txt h3 strong {
+    font-weight: 700;
+}
+
+
+
+
+
+@media (min-width: 1600px) {
+
+.stk-t_wr {
+    width: calc(100% - 300px );
+}
+}

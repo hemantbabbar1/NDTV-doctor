@@ -1,9 +1,33 @@
 import React from "react";
 import Logo from "./global_elements/Logo";
 import Header_Right from "./global_elements/Header_Right";
-import Mobile_Subnav from "./global_elements/Mobile_Subnav";
+import Mobile_Subnav_server from "./global_elements/Mobile_Subnav_server";
 import Humbernav from "./global_elements/Humbernav";
 import Navigation_server from "./global_elements/Navigation_server";
+
+import "../../styles/css/header/ndtv-col.css";
+import "../../styles/css/header/doctor/base/base.css";
+import "../../styles/css/header/doctor/base/base-ai.css";
+import "../../styles/css/base/base-doctor.css";
+import "../../styles/css/header/fonts-atf.css";
+import "../../styles/css/header/header.css";
+import "../../styles/css/header/header-icons.css";
+// import "../../styles/css/header/global-nav-ad-top.css";
+import "../../styles/css/widgets/dropdown/global-nav.css";
+import "../../styles/css/widgets/dropdown/get-app.css";
+
+import "../../styles/css/tooltip.css";
+import "../../styles/css/hr-scroll.css";
+import "../../styles/css/img-gratio.css";
+import "../../styles/css/overlay.css";
+import "../../styles/css/helper.css";
+
+// ATF
+import "../../styles/css/responsive/responsive-atf.css";
+import "../../styles/css/responsive/responsive-desktop-atf.css";
+// BTF
+import "../../styles/css/responsive/responsive-btf.css";
+import "../../styles/css/responsive/responsive-desktop-btf.css";
 
 const Header = () => {
   return (
@@ -23,7 +47,7 @@ const Header = () => {
         </nav>
 
         {/* For Mobile Subnav */}
-        <Mobile_Subnav />
+        <Mobile_Subnav_server />
       </div>
     </>
   );

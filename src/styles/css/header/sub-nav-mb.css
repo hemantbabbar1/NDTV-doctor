@@ -1,0 +1,348 @@
+.MSub-nv_flx {
+  display: flex;
+}
+.MSub-nav_wr {
+  display: flex;
+  align-items: center;
+  margin-left: -15px;
+  width: calc(100% + 15px);
+}
+.MSub-nav_vis.hr-scroll {
+  overflow: visible;
+}
+
+.srs_drp .MSub-nav_vis.hr-scroll {
+  overflow: hidden;
+}
+.MSub-nv_ul {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  padding: 0;
+  font-size: 0;
+  float: left;
+  width: 100%;
+}
+
+.MSub-nv_li {
+  display: flex;
+  float: left;
+  margin-right: 22px;
+  opacity: 1;
+  position: relative;
+  flex-direction: row;
+}
+.MSub-nv_li:first-child .MSub-nav_lnk {
+  margin-left: 4px;
+}
+.MSub-nv_li:last-child {
+  padding-right: 40px;
+}
+.MSub-nv_li:hover {
+  opacity: 1;
+}
+
+.MSub-nv_li .LvbBlnk_cn {
+  margin-top: 0;
+}
+
+.MSub-nv_rgt {
+  margin-left: auto;
+}
+
+.MSub-nav_snm {
+  color: var(--vj-cl-dr1);
+  display: inline-block;
+  padding: 7px 1px 6px 0;
+  text-transform: none;
+  position: relative;
+  z-index: 9;
+}
+
+.MSub-nav_snm .tp_lng-icn-bg {
+  top: 5px;
+}
+
+.MSub-nav_snm .MSub-nav_lnk.MSub-nav_mt {
+  padding: 0 6px 0 0;
+  text-transform: none;
+}
+.MSub-nav_snm .MSub-nav_lnk:after {
+  bottom: -8px;
+}
+
+.MSub-nav_lnk.MSub-nav_mt {
+  display: inline-block;
+  float: left;
+  font-weight: 600;
+  line-height: 14px;
+  text-align: center;
+  padding: 9px 3px 5px 0;
+  letter-spacing: 0;
+}
+
+.MSub-nav_mt-sb {
+  color: var(--vj-cl-rg8);
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0;
+}
+
+.MSub-nav_cn {
+  display: none;
+  float: left;
+  top: 0;
+  position: relative;
+  width: 100%;
+  transition: all 0.6s cubic-bezier(0.37, 0.15, 0.32, 0.94);
+}
+
+.MSub-nav {
+  background-color: var(--vj-cl-bg);
+  border-bottom: 1px solid var(--vj-cl-Mnbg2);
+  display: inline-block;
+  float: left;
+  position: relative;
+  width: 100%;
+  z-index: 99;
+}
+
+.MSub-nav_mb-30 {
+  margin-bottom: 30px;
+}
+
+.MSub-nav_lnk:after,
+.MSub-nav_act:after,
+.res-bt_MSub-nav .MSub-nav_lnk:after {
+  background: linear-gradient(136deg, rgb(222 0 86) 16%, rgb(77 125 255) 100%);
+  border-radius: 8px 8px 0 0;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  opacity: 0;
+  width: 0;
+  height: 4px;
+  margin: auto;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.MSub-nav_lnk:hover:after,
+.MSub-nav_act:after {
+  opacity: 1;
+  width: 100%;
+}
+
+.res-bt_MSub-nav .MSub-nav_lnk:after {
+  opacity: 1;
+  width: 100%;
+}
+
+.MSub-nav_lnk,
+.MSub-nav_lft {
+  color: var(--vj-cl-dr);
+  display: flex;
+  float: left;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  padding: 12px 0;
+  position: relative;
+  text-transform: capitalize;
+  white-space: nowrap;
+  align-items: center;
+  flex-direction: row;
+}
+.MSub-nav_info {
+  color: #ee473d;
+  display: inline-block;
+  float: left;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 15px 0 0 5px;
+  white-space: nowrap;
+}
+.MSub-nav_txt,
+.MSub-nav_txt1 {
+  color: #ee473d;
+  display: flex;
+  padding: 0;
+  /* position: relative; */
+  text-transform: capitalize;
+}
+
+.MSub-nav_txt1 {
+  display: flex;
+  line-height: 11px;
+  flex-direction: column;
+}
+.MSub-nav_txt1-sb {
+  color: var(--vj-cl-dr2);
+  display: inline-block;
+  margin-right: 3px;
+  float: left;
+}
+
+.MSub-nav_txt .vj_back-to-home {
+  font-size: 19px;
+  margin: 1px 6px 0 0;
+}
+
+.MSub-nav_lft {
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: 0;
+  padding: 0 9px 0 12px;
+  cursor: pointer;
+}
+
+.MSub-nav_lft .dd-nav_two .dd-nav {
+  left: -6px;
+  right: auto;
+  width: 300px;
+}
+
+.MSub-nav_lft .vjl-md-6 {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.MSub-nav_arw {
+  background: var(--vj-cl-rg3);
+  display: inline-block;
+  float: right;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  width: 1px;
+  top: 5px;
+  z-index: -1;
+}
+
+.MSub-nav_drp-icn {
+  display: initial;
+  font-size: 8px;
+  margin-left: 7px;
+  transition: 0.1s ease all;
+  -webkit-transition: 0.1s ease all;
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.res-bt_MSub-nav .MSub-nav_drp-icn {
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.srs_drp {
+  overflow: hidden;
+}
+
+.srs_drp .nav-stk_wr {
+  z-index: 999991;
+}
+
+@media (min-width: 1200px) {
+  .MSub-nv_li:hover .MSub-nav_drp-icn {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  .MSub-nav_lnk,
+  .MSub-nav_lft {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .MSub-nav_info {
+    padding: 18px 0 0 5px;
+  }
+  .MSub-nav_txt1 {
+    flex-direction: row;
+  }
+  .MSub-nav_txt1-sb {
+    color: #ee473d;
+  }
+}
+
+@media (max-width: 420px) {
+  .MSub-nav {
+    position: fixed;
+    top: 51px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .MSub-nav_cn {
+    display: flex;
+  }
+}
+
+.sub-nav_vis.hr-scroll {
+  overflow: visible;
+}
+.srs_drp .sub-nav_vis.hr-scroll {
+  overflow: hidden;
+}
+
+.js-res-bt_sub-nav .dd-nav {
+  -webkit-transform-origin: top center;
+}
+
+@media (max-width: 768px) {
+  .MSub-nv_li.dd-nav_one .dd-nav {
+    width: 100%;
+  }
+
+  .MSub-nv_li .dd-nav_in {
+    border-bottom: 0 none;
+  }
+
+  .js-res-bt_sub-nav .dd-nav {
+    border-radius: 0;
+    left: -1px;
+    right: -1px;
+    width: auto;
+  }
+
+  .js-res-bt_sub-nav .dd-nav,
+  .js-res-bt_sub-nav.dd-nav_one .dd-nav {
+    border-radius: 0;
+    left: -1px;
+    right: -1px;
+    width: auto;
+  }
+  .js-res-bt_sub-nav .dd-nav {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  .js-res-bt_sub-nav .dd-nav {
+    border-radius: 0;
+    left: -1px;
+    right: -1px;
+    width: auto;
+  }
+  .js-res-bt_sub-nav .dd-nav {
+    -webkit-transform-origin: top center;
+  }
+}
+
+.MSub-nav_drp-icn {
+  display: initial;
+  font-size: 8px;
+  transition: 0.1s ease all;
+  -webkit-transition: 0.1s ease all;
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.js-res-bt_sub-nav .MSub-nav_drp-icn {
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}

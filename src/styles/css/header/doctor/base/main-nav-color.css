@@ -1,0 +1,45 @@
+
+/*-- Main Nav ---*/
+
+
+/*--====== Light ======--*/
+:root {
+    --vj-cl-Mnbg1: #03c1de;
+    --vj-cl-Mnbg2: #e4e4e4;
+    --vj-cl-Mnbg3: #ffffffc7;
+}
+
+
+/*--====== Dark ======--*/
+:root .day_night {
+    --vj-cl-Mnbg1: #03c1de;
+    --vj-cl-Mnbg2: #272b31;
+    --vj-cl-Mnbg3: #1a1a1ad4;
+}
+
+/*--====== Dark Mode ======--*/
+@media (prefers-color-scheme:dark){
+    /*--====== Dark ======--*/
+    :root {
+    --vj-cl-Mnbg1: #03c1de;
+    --vj-cl-Mnbg2: #272b31;
+    --vj-cl-Mnbg3: #1a1a1ad4;
+    }
+
+    /*--====== Light ======--*/
+    :root .day_night {
+        --vj-cl-Mnbg1: #03c1de;
+    --vj-cl-Mnbg2: #e4e4e4;
+    --vj-cl-Mnbg3: #ffffffc7;
+    }
+}
+
+
+.m-nv_clr {
+    background-color: transparent;
+}
+
+
+.m-nv_clr.m-nv_clr1 {
+    background-color: var(--vj-cl-Mnbg1);
+}

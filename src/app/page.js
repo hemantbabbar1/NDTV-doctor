@@ -9,8 +9,7 @@ export const metadata = {
 };
 
 // Home CSS imports
-import "../styles/css/base/home-header.css";
-import "../styles/css/base/base-doctor.css";
+// import "../styles/css/base/home-header.css";
 import "../styles/css/pages-css/_home-page-styles.css";
 import HomeSections from "../components/Home/HomeSections";
 

@@ -1,0 +1,163 @@
+
+
+
+
+
+
+
+/*---- Login / Signup buttons ----*/
+
+
+/*--====== Light ======--*/
+
+
+.log_btn {
+    background: var(--vj-cl-Mnbg1);
+    /* border: 2px solid var(--vj-cl-LgBt2); */
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    float: right;
+    border-radius: 26px;
+    font-size: 15px;
+    font-family: var(--ff-one);
+    font-weight: 500;
+    line-height: 24px;
+    margin: 10px 0 0 8px;
+    padding: 3px 7px;
+    position: relative;
+    cursor: pointer;
+    /* transition: .17s ease all; */
+    height: 33px;
+    width: 33px;
+    text-transform: capitalize;
+    align-items: center;
+    z-index: 6;
+    justify-content: center;
+}
+
+.log_btn:hover {
+    /* background: #47905a; */
+    /* border: 2px solid #47905a; */
+    /* color: #ccffd8; */
+    opacity: 0.7;
+}
+
+
+.log_btn-act {
+    /* background: #47905a; */
+    border: 2px solid #c89d29;
+    border-radius: 32px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.log_btn .vj_icn {
+    font-size: 15px;
+    /* color: var(--vj-cl-LgBt3); */
+    margin-right: 0;
+}
+
+
+.log_btn:hover .vj_icn {
+    /* color: var(--vj-cl-LgBt1); */
+}
+
+.log_btn.log_btn-act .vj_icn {
+    color: #e43e7e;
+}
+
+
+
+
+
+
+
+/*--====== WAP ======--*/
+
+.log_btn-tx {
+        display: flex;
+        margin-left: 5px;
+    }
+
+.log_btn-act .log_btn-tx {
+    display: none;
+}
+           
+.log_btn-act .log_btn-dt {
+    background: #ec1d23;
+    border-radius: 12px;
+    display: flex;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    bottom: 2px;
+    right: -2px;
+    }
+
+    
+    
+    
+    
+    .mRgt_wr .log_btn {
+    margin-top: 0;
+}
+
+.m-nv_clr1 .log_btn {
+    /* background: #3d48b4; */
+    border: 1px solid #ffffff;
+}
+
+.m-nv_clr1 .log_btn.log_btn-act {
+    border: 1px solid #ec1d23;
+}
+    
+    
+    
+    
+    
+    
+
+            @media (min-width: 1200px) {
+.log_btn-act .log_btn-dt {
+                /* display: none; */
+            }
+.log_btn .vj_icn {
+    font-size: 15px;
+    color: #ffffff;
+}
+            }
+
+
+
+
+
+
+@media (max-width: 1199px) {
+
+
+    .log_btn {
+        background: var(--vj-cl-LgBt1);
+        border-radius: 32px;
+        margin: 9px 0px 0 8px;
+        width: 33px;
+    }
+    .log_btn-act {
+    /* border: 2px solid #41a4db; */
+}
+    .log_btn-tx {
+        display: none;
+    }
+    .log_btn-act .log_btn-dt {
+    bottom: 2px;
+    right: -2px;
+}
+}
+
+
+
+@media (max-width:1200px){
+.hdr-nn {display: none}
+}
+
+

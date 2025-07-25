@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
+import "../../styles/css/breadcrumb.css";
 
 const Breadcrumbs = () => {
   const pathname = usePathname();

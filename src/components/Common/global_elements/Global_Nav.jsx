@@ -29,7 +29,7 @@ const Global_Nav = ({ allData, error }) => {
         <div className="m-nv_li GlbNv_li">
           <div className="GlbNv1_wg">
             <Link
-              className="m-nv_lnk GlbNv1_lnk"
+              className="m-nv_ lnk GlbNv1_lnk"
               href="https://www.ndtv.com/"
               aria-label="Back to NDTV.com"
             >
@@ -37,7 +37,7 @@ const Global_Nav = ({ allData, error }) => {
               NDTV.com
             </Link>
 
-            <div className="m-nv_lnk GlbNv1_lnk GlbNv1_lnk-all dd-nav_hvr ">
+            <div className="m-nv_ lnk GlbNv1_lnk GlbNv1_lnk-all dd-nav_hvr ">
               <span className="GlbNv1_lnk-spn"></span>
               <svg
                 className="vj_icn vj-Menu-dots"

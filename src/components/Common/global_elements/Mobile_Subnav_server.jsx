@@ -2,8 +2,7 @@ import React from "react";
 import Mobile_Subnav from "./Mobile_Subnav";
 
 // API base URL from environment variable
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL; // या process.env.NEXT_PUBLIC_API_BASE_URL;
-
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 const Mobile_Subnav_server = async () => {
   let menuLinks = [];
   //let menuMobLinks = [];

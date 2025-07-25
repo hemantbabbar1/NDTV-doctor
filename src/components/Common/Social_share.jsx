@@ -6,6 +6,8 @@ import { FaXTwitter, FaYoutube, FaFacebook } from "react-icons/fa6";
 import { RiWhatsappFill } from "react-icons/ri";
 import { FaRedditAlien } from "react-icons/fa";
 
+import "../../styles/css/elements/social-dropdown.css";
+
 const Social_share = ({ item }) => {
   return (
     <>

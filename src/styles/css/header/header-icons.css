@@ -1,0 +1,90 @@
+
+
+
+.mRgt_wr {
+    display: flex;
+    float: right;
+    align-items: center;
+    height: 100%;
+}
+.mRgt_wr .m-nv_li {
+    padding-right: 0;
+}
+
+.SdNv_ic-wr {
+    background: #2c2c3c;
+    border: 1px solid #454557;
+    display: flex;
+    border-radius: 100%;
+    color: #fff;
+    margin-left: 6px;
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.SdNv_ic-cn {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+
+
+.SdNv_icn {
+    font-size: 20px;
+}
+
+.LngDr_wg {
+    background: #2c2c3c;
+    border: 1px solid #454557;
+    display: flex;
+    border-radius: 62px;
+    color: #fff;
+    margin-left: 6px;
+    padding: 0 5px;
+    height: 36px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.LngDr_icn-w, .LngDr_icn-w2 {
+    display: flex;
+    height: 100%;
+    padding: 0 5px;
+    align-items: center;
+}
+
+.LngDr_icn {
+    font-size: 20px;
+}
+
+.LngDr_icn-w2 {
+    padding: 0 2px 0 2px;
+}
+
+.LngDr_icn-w2 .LngDr_icn {
+    font-size: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

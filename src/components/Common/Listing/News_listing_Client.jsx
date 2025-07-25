@@ -4,6 +4,9 @@ import News_listing from "./News_listing";
 import { SlArrowDown } from "react-icons/sl";
 import Link from "next/link";
 
+import "../../../styles/css/elements.css";
+import "../../../styles/css/loader-list.css";
+
 const News_listing_Client = ({ listingnews }) => {
   // State to manage visible news count and loading state
   const [visibleCount, setVisibleCount] = useState(5);
@@ -42,7 +45,7 @@ const News_listing_Client = ({ listingnews }) => {
         fadeInRange={fadeInRange}
       />
       {visibleCount < listingnews.length && (
-        <div className="btn_bm-cntr mb-30">
+        <div className="btn_bm-cntr mb-20">
           <Link
             className="btn_bm"
             href="#"

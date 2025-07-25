@@ -1,0 +1,54 @@
+
+body.js_sid-nav, body.js_ser-nav, body.js_pin-up, body.js-npop-frm {
+    overflow: hidden;
+}
+
+.overlay__side-nav {
+    background: rgba(0, 0, 0, 0);
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    backdrop-filter: blur(0);
+    top: -88px;
+    z-index: 99999;
+    -webkit-transition: 0.36s ease all;
+    -moz-transition: 0.36s ease all;
+    -ms-transition: 0.36s ease all;
+    -o-transition: 0.36s ease all;
+    transition: 0.36s ease all;
+}
+
+.js_sid-nav .overlay__side-nav, 
+.js_ser-nav .overlay__side-nav, 
+.js_pin-up .overlay__side-nav, 
+.js-npop-frm .overlay__side-nav, 
+.js_fltr-nav .overlay__side-nav, 
+.js_AutPup_nav .overlay__side-nav, 
+.js_RecFlt-nav .overlay__side-nav, 
+.SUpNv-on .overlay__side-nav,
+.srs_drp .overlay__side-nav,
+.Js-GlbNv-on .overlay__side-nav{
+    background: rgb(0 0 0 / 50%);
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    -webkit-transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -ms-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+}
+.SUpNv-on .overlay__side-nav {
+    background: rgb(0 0 0 / 66%);
+}
+
+.js_pin-up .overlay__side-nav {
+    background: #f2dfce;
+}
+.js-npop-frm .overlay__side-nav {
+    background: rgba(0, 0, 0, 0.6);
+}

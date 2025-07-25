@@ -1,0 +1,27 @@
+
+.hr-scroll {
+    overflow-y: hidden
+}
+.hr-scroll {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch
+}
+.hr-scroll::-webkit-scrollbar {
+    display:none
+}
+.hr-scroll__content {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 0;
+    white-space: normal;
+}
+.hr-scroll__item {
+    display: inline-block;
+    flex-shrink: 0;
+    vertical-align: top;
+    white-space: normal
+}
+.hr-scroll__item>.card {
+    min-height: 100%
+}
+

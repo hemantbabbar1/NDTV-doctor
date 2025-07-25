@@ -1,0 +1,311 @@
+
+
+/*--====== Light ======--*/
+:root {
+    --vj-cl-TpGnAd1: #e0e0e0;
+    --vj-cl-TpGnAd2: #d1d1d1;
+}
+/*--====== Dark ======--*/
+:root .day_night {
+    --vj-cl-TpGnAd1: linear-gradient(180deg, #000000 0%, #0e0e0e 100%);
+    --vj-cl-TpGnAd2: #6c6c6c5c;
+}
+/*--====== Dark Mode ======--*/
+@media (prefers-color-scheme:dark){
+    /*--====== Dark ======--*/
+    :root {
+    --vj-cl-TpGnAd1: linear-gradient(180deg, #000000 0%, #0e0e0e 100%);
+    --vj-cl-TpGnAd2: #6c6c6c5c;
+    }
+    /*--====== Light ======--*/
+    :root .day_night {
+    --vj-cl-TpGnAd1: #e0e0e0;
+    --vj-cl-TpGnAd2: #d1d1d1;
+    }
+}
+
+.TpGnAd_sec {
+    border-top: 1px solid var(--vj-cl-TpGnAd2);
+    bottom: 0;
+    display: none;
+    float: left;
+    position: relative;
+    width: 100%;
+    transition: all .9s ease-out;
+    z-index: 99999;
+}
+
+
+.TpGnAd_sec:before {
+    content: "";
+    background: var(--vj-cl-TpGnAd1);
+    border-bottom: 1px solid var(--vj-cl-TpGnAd2);
+    backdrop-filter: blur(7px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+
+.alpha .TpGnAd_sec {
+    /* bottom: -110%; */
+}
+
+
+
+.TpGnAd_ad-cn {
+    padding: 6px 0 6px;
+}
+
+
+
+
+
+
+
+
+.TpGnAd_nv-cn {
+    /* background: var(--vj-cl-lg1); */
+    /* border-bottom: 1px solid rgb(0 0 0 / 17%); */
+    position: relative;
+}
+
+.TpGnAd_ul {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 0;
+    float: left;
+}
+
+.TpGnAd_li {
+    display: inline-block;
+}
+
+.TpGnAd_lnk, .TpGnAd_act {
+    border-radius: 3px;
+    color: var(--vj-cl-dr1);
+    display: inline-block;
+    font-family: var(--ff-two);
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 12px;
+    padding: 6px 0 0;
+    position: relative;
+}
+
+.TpGnAd_lnk:hover, .TpGnAd_act:hover {
+    color: var(--vj-cl-dr);
+}
+
+.TpGnAd_lnk:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 0px;
+    height: 2px;
+    opacity: 0;
+    margin: auto;
+    background: #e8e8e85e;
+    transition: all 0.3s ease-in-out;
+}
+
+.TpGnAd_act:before, .TpGnAd_lnk:hover:before, .TpGnAd_lnk:focus:before {
+    width: 100%;
+    opacity: 1;
+}
+
+.TpGnAd_lbl {
+    background-color: #e44422;
+    border-radius: 3px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 8px;
+    font-weight: 800;
+    line-height: 6px;
+    min-height: 10px;
+    padding: 2px 3px;
+    position: absolute;
+    top: -1px;
+    right: -10px;
+    text-transform: uppercase;
+}
+
+.TpGnAd_li:first-child .TpGnAd_lnk {
+    margin-left: 0;
+}
+
+.TpGnAd_ul:hover .TpGnAd_li:not(:hover) {
+    opacity: 0.67;
+}
+
+.TpGnAd_ul .TpGnAd_li {
+    opacity: 1;
+}
+
+.TpGnAd_ul .TpGnAd_li .TpGnAd_li:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.TpGnAd_ad-wr {
+    display: flex;
+    float: left;
+    font-size: 0;
+    text-align: center;
+    width: 100%;
+    min-height: 94px;
+    justify-content: center;
+}
+
+.TpGnAd_ad-im {
+    background: #7f7f7f1c;
+    display: inline-block;
+    padding: 2px 2px 2px 24px;
+    position: relative;
+}
+
+.TpGnAd_lf {
+    text-align: center;
+}
+
+.TpGnAd_ad-tx {
+        writing-mode: tb-rl;
+        transform: rotate(-180deg) translateY(-50%);
+        position: absolute;
+        left: 5px;
+        bottom: 50%;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 14px;
+        color: #7f7f7f8c;
+        padding: 3px 0;
+        text-shadow: 0 1px 4px rgb(0 0 0 / 7%);
+        text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1200px) {
+
+
+.TpGnAd_sec {
+    display: inline-block;
+}
+
+}
+
+
+
+
+
+
+
+/*
+<!--====== Global Nav, Advertisement ======-->
+<div class="TpGnAd_sec">
+
+        <!-- Top Advertisement ======-->
+        <div class="TpGnAd_ad-cn">
+            <div class="vjl-cntr">
+                <div class="vjl-row">
+                    <div class="vjl-md-12">
+
+
+
+
+                        <div class="TpGnAd_ad-wr">
+                            <div class="TpGnAd_ad-im"><span class="TpGnAd_ad-tx">Advertisement</span>
+                                <img src="https://tpc.googlesyndication.com/simgad/927333225985893561" border="0" width="728" height="90" alt="" https:="" tpc.googlesyndication.com="" simgad="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Global Nav ======-->
+        <div class="TpGnAd_nv-cn">
+            <div class="vjl-cntr">
+                <div class="vjl-row">
+                    <div class="vjl-md-12">
+                        <!-- Top Menu -->
+                        <nav class="TpGnAd_lf">
+                            <ul class="TpGnAd_ul">
+                                <li class="TpGnAd_li"><a class="TpGnAd_lnk" title="NDTV" href="home-ndtv.html">NDTV</a>
+                                </li>
+                                <li class="TpGnAd_li"><a class="TpGnAd_lnk" title="Business" href="http://profit.ndtv.com/">Business</a>
+                                </li>
+                                <li class="TpGnAd_li"><a class="TpGnAd_lnk" title="Hindi" href="https://khabar.ndtv.com/">Hindi</a>
+                                </li>
+                                <li class="TpGnAd_li"><a class="TpGnAd_lnk" title="Movies" href="http://movies.ndtv.com/">Movies</a>
+                                </li>
+                                <li class="TpGnAd_li"><a class="TpGnAd_lnk" title="Cricket" href="https://sports.ndtv.com/cricket">Cricket</a>
+                                </li>
+                                <li class="TpGnAd_li"><a class="TpGnAd_lnk" href="https://swirlster.ndtv.com">Lifestyle</a>
+                                </li>
+                                <li class="TpGnAd_li"><a class="TpGnAd_lnk" title="Health" href="http://doctor.ndtv.com/">Health</a>
+                                </li>
+                                <li class="TpGnAd_li"><a class="TpGnAd_lnk TpGnAd_act" title="Food" href="index-food.html">Food</a>
+                                </li>
+                                <li class="TpGnAd_li"><a class="TpGnAd_lnk" title="Tech" href="http://gadgets.ndtv.com/">Tech</a>
+                                </li>
+                                <li class="TpGnAd_li"><a class="TpGnAd_lnk" title="Auto" href="http://auto.ndtv.com">Auto</a>
+                                </li>
+                                <li class="TpGnAd_li"><a class="TpGnAd_lnk" title="Apps" href="https://www.ndtv.com/page/apps/">Apps</a>
+                                </li>
+                                <li class="TpGnAd_li"><a class="TpGnAd_lnk" title="Trains" href="https://www.railbeeps.com">Trains</a>
+                                </li>
+                                <li class="TpGnAd_li"><a class="TpGnAd_lnk" title="Art" href="https://www.mojarto.com">Art</a>
+                                </li>
+                                <li class="TpGnAd_li"><a class="TpGnAd_lnk" title="Weddings" href="http://www.bandbaajaa.com">Weddings</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+*/
+
+
+
+
+

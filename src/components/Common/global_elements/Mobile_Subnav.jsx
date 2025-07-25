@@ -3,26 +3,11 @@
 import React from "react";
 import Link from "next/link";
 
+import "../../../styles/css/header/sub-nav.css";
+import "../../../styles/css/header/sub-nav-mb.css";
+// import "../../../styles/css/header/sub-bottom-nav.css";
+
 export const Mobile_Subnav = ({ menuLinks, error }) => {
-  // const [navLinks, setNavLinks] = useState([]);
-  // const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState(null);
-
-  // useEffect(() => {
-  //   const fetchNavLinks = async () => {
-  //     try {
-  //       const res = await axios.get("/data/navLinks.json");
-  //       setNavLinks(res.data);
-  //     } catch (err) {
-  //       setError(err.message);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchNavLinks();
-  // }, []);
-
-  // // if (loading) return <div>Loading...</div>;
   if (error) return <div style={{ color: "red" }}>Error: {error}</div>;
 
   return (

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import "../../styles/css/widgets/side-widget.css";
 import Sidebar_Tittle from "../Sidebar/Sidebar_Tittle";
 
@@ -16,9 +17,9 @@ const Recent_news = ({ recentNews, error }) => {
             {recentNews && recentNews.length > 0 ? ( // Added check for recentNews
               recentNews.slice(0, 5).map((recentItem) => (
                 <li key={recentItem.id} className="s-ls_li">
-                  <a href="#" className="s-ls_lnk">
+                  <Link href={recentItem.link} className="s-ls_lnk">
                     <div className="s-ls_txt">{recentItem.title}</div>
-                  </a>
+                  </Link>
                 </li>
               ))
             ) : (

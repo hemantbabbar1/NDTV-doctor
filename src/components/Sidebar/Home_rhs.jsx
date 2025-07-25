@@ -1,5 +1,6 @@
 import React from "react";
 import "../../../src/styles/css/elements/calc-metrics.css";
+import "../../../src/styles/css/rhs-advertisement.css";
 
 const Home_rhs = () => {
   return (
