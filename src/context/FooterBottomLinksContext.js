@@ -10,20 +10,20 @@ const FooterBottomLinksContext = createContext();
 export const FooterLinksProvider = ({ children }) => {
   const [links, setLinks] = useState([]);
 
-  useEffect(() => {
-    const fetchLinks = async () => {
-      try {
-        const res = await fetch(
-          "https://edata.ndtv.com/feeds/hp/Footer2016Bottom.json"
-        );
-        const data = await res.json();
-        setLinks(data);
-      } catch (err) {
-        console.error("Failed to fetch footer links:", err);
-      }
-    };
-    fetchLinks();
-  }, []);
+  // useEffect(() => {
+  //   const fetchLinks = async () => {
+  //     try {
+  //       const res = await fetch(
+  //         "https://edata.ndtv.com/feeds/hp/Footer2016Bottom.json"
+  //       );
+  //       const data = await res.json();
+  //       setLinks(data);
+  //     } catch (err) {
+  //       console.error("Failed to fetch footer links:", err);
+  //     }
+  //   };
+  //   fetchLinks();
+  // }, []);
 
   return (
     <FooterBottomLinksContext.Provider value={{ links }}>
