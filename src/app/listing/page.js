@@ -3,7 +3,7 @@ import axios from "axios";
 
 // Importing components
 import News_listing_Client from "@/src/components/Common/Listing/News_listing_Client";
-import PageTitle2 from "@/src/components/Common/PageTitle2";
+import PageTitle2 from "../../../src/components/Common/PageTitle2";
 
 // API base URL to environment variable
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
