@@ -13,7 +13,7 @@ import Home_section8_server from "./sections/Home_section8_server";
 import Home_section9_server from "./sections/Home_section9_server";
 import Home_section10 from "./sections/Home_section10";
 import Home_section11_server from "./sections/Home_section11_server";
-import Taboola_home from "../Taboola/Taboola_home";
+import Taboola_home from "@/src/components/Taboola/Taboola_home";
 
 const HomeSections = () => {
   return (
