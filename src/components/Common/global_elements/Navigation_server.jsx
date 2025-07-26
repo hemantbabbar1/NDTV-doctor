@@ -1,33 +1,32 @@
 import React from "react";
 import Navigation from "./Navigation";
+import axios from "axios"; // axios इंपोर्ट करें
 
-// API base URL from environment variable
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL ||
-  process.env.VERCEL_URL ||
-  "http://localhost:3000";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+const USE_STATIC_DATA = process.env.NEXT_PUBLIC_USE_STATIC_DATA === "true";
 
 const Navigation_server = async () => {
   let menuLinks = [];
   let error = null;
 
   try {
-    // Fetch data directly on the server with revalidation option
-    const res = await fetch(`${API_BASE_URL}/data/navLinks.json`, {
-      next: { revalidate: 1800 }, // Every 30 min jason will revalidate and relode.
-    });
+    // let dataUrl; // इस लाइन को कमेंट करें या हटा दें
 
-    if (!res.ok) {
-      throw new Error(
-        `Failed to fetch navigation data: ${res.status} ${res.statusText}`
-      );
-    }
+    // लोकल डीबगिंग के लिए हार्डकोड करें
+    const dataUrl = "http://localhost:3000/data/navLinks.json"; // <--- इसे Vercel पर डिप्लॉय न करें!
 
-    const data = await res.json();
-    menuLinks = data;
+    console.log("Attempting to fetch from URL:", dataUrl);
+
+    const res = await axios.get(dataUrl);
+
+    menuLinks = res.data;
   } catch (e) {
     console.error("Error fetching data in Navigation_server:", e);
-    //error = `Failed to load navigation links: ${e.message}`;
+    if (process.env.NODE_ENV === "development") {
+      error = `Failed to load navigation links: ${e.message}`;
+    } else {
+      error = "Failed to load navigation links.";
+    }
   }
 
   return (
@@ -36,5 +35,4 @@ const Navigation_server = async () => {
     </>
   );
 };
-
 export default Navigation_server;
