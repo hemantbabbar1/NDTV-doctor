@@ -2,7 +2,10 @@ import Home_section6 from "./Home_section6";
 import axios from "axios";
 
 // API base URL to environment variable
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_BASE_URL ||
+  process.env.VERCEL_URL ||
+  "http://localhost:3000";
 
 async function getArticles() {
   // Use the full URL for your local server

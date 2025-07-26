@@ -1,9 +1,11 @@
 import React from "react";
 import Navigation from "./Navigation";
-import Mobile_Subnav from "./Mobile_Subnav";
 
 // API base URL from environment variable
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL; // या process.env.NEXT_PUBLIC_API_BASE_URL;
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_BASE_URL ||
+  process.env.VERCEL_URL ||
+  "http://localhost:3000";
 
 const Navigation_server = async () => {
   let menuLinks = [];
