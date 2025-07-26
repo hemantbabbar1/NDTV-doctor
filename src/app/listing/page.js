@@ -1,31 +1,26 @@
 import React from "react";
-import axios from "axios";
+import { fetchData } from "utils/fetchData";
 
 // Importing components
 import News_listing_Client from "@/src/components/Common/Listing/News_listing_Client";
 import Pagetitle2 from "@/src/components/Common/Pagetitle2";
 
-// API base URL to environment variable
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
-
-// Example axios function with error flag
-async function getlistingNews() {
-  try {
-    const res = await axios.get(`${API_BASE_URL}/data/listing/list-page.json`, {
-      headers: { "Cache-Control": "no-store" },
-    });
-    return {
-      listingnews: res.data.item,
-      error: false,
-    };
-  } catch (error) {
-    return { listingnews: [], error: true };
-  }
-}
-
 // Page component for listing
 const page = async () => {
-  const { listingnews, error } = await getlistingNews();
+  let listingnews = [];
+  let error = false;
+
+  try {
+    // Fetch data using the centralized fetchData helper function
+    const data = await fetchData(
+      "/data/listing/list-page.json", // API endpoint
+      "public/data/listing/list-page.json" // Static file path
+    );
+    listingnews = data.item || [];
+  } catch (e) {
+    error = true;
+  }
+
   return (
     <>
       <div className="LstPg_cnt">

@@ -5,7 +5,7 @@ import Social_share_article from "../Social_share_article";
 import Image from "next/image";
 import PostBy from "./PostBy";
 import Ad_300X250_wap from "../Advertisement/Ad_300X250_wap";
-import ReadInApp from "./ReadInApp";
+// import ReadInApp from "./ReadInApp";
 import Copy_Btn from "./Copy_Btn";
 import ShowMoreWAP from "./ShowMoreWAP";
 

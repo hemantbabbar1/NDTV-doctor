@@ -4,7 +4,10 @@ export const Logo = () => {
   return (
     <>
       <div className="hdr-lhs-col fleft">
-        <a className="ndtv-logo ndtv-logo-rgnl" href="/">
+        <a
+          className="ndtv-logo ndtv-logo-rgnl"
+          href="https://doctor.ndtv.com/?pfrom=ndtv-globalnav"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="136.892"
