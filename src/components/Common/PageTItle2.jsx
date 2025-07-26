@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/css/widgets/title-widget-2.css";
 
-const PageTitle2 = ({ title }) => {
+const Pagetitle2 = ({ title }) => {
   return (
     <>
       <div className="Dcttl2_wr">
@@ -13,4 +13,4 @@ const PageTitle2 = ({ title }) => {
   );
 };
 
-export default PageTitle2;
+export default Pagetitle2;
