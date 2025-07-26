@@ -79,7 +79,7 @@ const Home_section10 = () => {
                         <div className="vjl-md-6">
                           <div className="CalcFrm-ttl">Age</div>
                           <div className="BMIFrm_txt-fld">
-                            <input type="text" id="age" class="BMIFrm_inp" name="age">
+                            <input type="text" id="age" className="BMIFrm_inp" name="age">
 
                           </div>
 
@@ -91,7 +91,7 @@ const Home_section10 = () => {
                         <div className="vjl-md-6">
                           <div className="CalcFrm-ttl">Weight</div>
                           <div className="BMIFrm_txt-fld">
-                           <input type="text" id="weight" class="BMIFrm_inp" name="weight">
+                           <input type="text" id="weight" className="BMIFrm_inp" name="weight">
 
                             <div className="BMIFrm_txt-prmt">Kg</div>
                           </div>
@@ -105,7 +105,7 @@ const Home_section10 = () => {
                         <div className="vjl-md-6">
                           <div className="CalcFrm-ttl">Height</div>
                           <div className="BMIFrm_txt-fld">
-                            <input type="text" id="height" class="BMIFrm_inp" name="height">
+                            <input type="text" id="height" className="BMIFrm_inp" name="height">
 
                             <div className="BMIFrm_txt-prmt">Feet</div>
                           </div>
@@ -114,7 +114,7 @@ const Home_section10 = () => {
                         <div className="vjl-md-6">
                           <div className="CalcFrm-ttl">&nbsp;</div>
                           <div className="BMIFrm_txt-fld">
-                           <input type="text" id="inches" class="BMIFrm_inp" name="inches">
+                           <input type="text" id="inches" className="BMIFrm_inp" name="inches">
 
                             <div className="BMIFrm_txt-prmt">Inches</div>
                           </div>
