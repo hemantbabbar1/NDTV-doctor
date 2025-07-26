@@ -31,9 +31,10 @@ async function getArticles() {
         "API_BASE_URL environment variable is not set for external API calls."
       );
     }
-    const dataUrl = `${API_BASE_URL}/api/videos`; // ensure this is correct
 
-    //console.log("DEBUG: Fetching from external API:", dataUrl); // DEBUG लॉग
+    const dataUrl = `${API_BASE_URL}/api/videos`; // Dynamic URL
+
+    console.log("DEBUG: Fetching from external API:", dataUrl);
 
     const res = await fetch(dataUrl, {
       next: { revalidate: 1800 },

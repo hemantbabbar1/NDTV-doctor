@@ -10,12 +10,15 @@ const FooterBottomLinksContext = createContext();
 export const FooterLinksProvider = ({ children }) => {
   const [links, setLinks] = useState([]);
 
+  const baseURL =
+    process.env.NODE_ENV === "production"
+      ? "https://ndtv-doctor-a74djls43-hemantbabbar1s-projects.vercel.app"
+      : "http://localhost:3000";
+
   // useEffect(() => {
   //   const fetchLinks = async () => {
   //     try {
-  //       const res = await fetch(
-  //         "https://edata.ndtv.com/feeds/hp/Footer2016Bottom.json"
-  //       );
+  //       const res = await fetch(`${baseURL}/data/navLinks.json`);
   //       const data = await res.json();
   //       setLinks(data);
   //     } catch (err) {
