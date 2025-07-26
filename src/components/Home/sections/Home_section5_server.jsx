@@ -1,24 +1,25 @@
 import React from "react";
 import Home_section5 from "./Home_section5";
-import axios from "axios";
+import { fetchData } from "utils/fetchData"; // Import fetchData helper function
 
-// API base URL to environment variable
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
-
-// This is a Server Component, so it doesn't have "use client"
 const Home_section5_server = async () => {
   let allData = [];
   let error = null;
 
   try {
-    // Fetch data directly on the server
-    const response = await axios.get(
-      `${API_BASE_URL}/data/Health-solutions2.json`
+    // Use fetchData to fetch data
+    const data = await fetchData(
+      "/data/Health-solutions2.json", // API endpoint
+      "public/data/Health-solutions2.json" // Static file path
     );
-    allData = response.data.results;
-    //console.log("Health Solutions data fetched on server."); // Debug comment
+
+    // Ensure data.results is valid
+    allData = Array.isArray(data.results) ? data.results : [];
   } catch (e) {
-    //console.error("Error fetching health solutions data:", e);
+    console.error(
+      "Error fetching health solutions data in Home_section5_server:",
+      e
+    );
     error = "Failed to load data.";
   }
 

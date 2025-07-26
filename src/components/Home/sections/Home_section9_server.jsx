@@ -1,27 +1,20 @@
-import axios from "axios";
+import { fetchData } from "utils/fetchData";
 import Home_section9 from "./Home_section9";
-
-// API base URL to environment variable
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
-
-// This function fetches the data on the server
-async function getPhotosHome() {
-  const res = await axios.get(`${API_BASE_URL}/data/photo-gallery.json`);
-
-  // axios automatically parses JSON and provides it in res.data
-  return res.data.results;
-}
 
 const Home_section9_server = async () => {
   let homePhotos = [];
   let error = null;
 
   try {
-    const allPhotos = await getPhotosHome();
-    homePhotos = allPhotos.slice(0, 8); // Slice the data on the server
+    const data = await fetchData(
+      "/data/photo-gallery.json", // API endpoint
+      "public/data/photo-gallery.json" // Static file path
+    );
+
+    // Extract 'results' from the object if it exists
+    homePhotos = Array.isArray(data.results) ? data.results.slice(0, 8) : [];
   } catch (err) {
-    // axios throws an error on non-2xx status codes, so we can catch it here
-    //console.error("Error fetching photos:", err.message);
+    console.error("Error fetching photos in Home_section9_server:", err);
     error = "Failed to load photos.";
   }
 

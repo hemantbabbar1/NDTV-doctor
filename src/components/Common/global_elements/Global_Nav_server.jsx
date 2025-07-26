@@ -1,9 +1,10 @@
 import React from "react";
 import Global_Nav from "./Global_Nav";
-import axios from "axios";
+import { fetchData } from "utils/fetchData";
 
 // API base URL to environment variable
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+const USE_STATIC_DATA = process.env.NEXT_PUBLIC_USE_STATIC_DATA === "true";
 
 // This is a Server Component, so it doesn't have "use client"
 const Global_Nav_server = async () => {
@@ -11,11 +12,12 @@ const Global_Nav_server = async () => {
   let error = null;
 
   try {
-    // Fetch data directly on the server
-    const response = await axios.get(`${API_BASE_URL}/data/global-nav.json`);
-    allData = response.data;
+    allData = await fetchData(
+      "/data/global-nav.json", // API endpoint
+      "public/data/global-nav.json" // Static file path
+    );
   } catch (e) {
-    //console.error("Error fetching live feed data:", e);
+    console.error("Error fetching data in Global_Nav_server:", e);
     error = "Failed to load data.";
   }
 

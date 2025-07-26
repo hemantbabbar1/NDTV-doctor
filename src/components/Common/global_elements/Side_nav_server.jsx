@@ -1,9 +1,6 @@
 import React from "react";
 import Side_nav from "./Side_nav";
-import axios from "axios";
-
-// API base URL to environment variable
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+import { fetchData } from "utils/fetchData";
 
 // This is a Server Component, so it doesn't have "use client"
 const Side_nav_server = async () => {
@@ -14,21 +11,20 @@ const Side_nav_server = async () => {
   let loopNav3 = [];
 
   try {
-    // Fetch data directly on the server
-    const response = await axios.get(
-      `${API_BASE_URL}/data/wapburgurmenueng2020.json`
+    // Fetch data using the centralized fetchData helper function
+    const data = await fetchData(
+      "/data/wapburgurmenueng2020.json", // API endpoint
+      "public/data/wapburgurmenueng2020.json" // Static file path
     );
-    allData = response.data;
+    allData = data;
+
     // only first 6 result
     if (allData && allData.length > 0) {
       loopNav1 = allData.slice(0, 8);
       loopNav2 = allData.slice(8, 14);
       loopNav3 = allData.slice(14, 28);
     }
-
-    //console.log("Side nav data fetched on server."); // Debug comment
   } catch (e) {
-    //console.error("Error fetching live feed data:", e);
     error = "Failed to load data.";
   }
 

@@ -1,25 +1,19 @@
 import React from "react";
 import Atf_Sections from "./Atf_sections";
-
-// API base URL to environment variable
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+import { fetchData } from "utils/fetchData";
 
 const Atf_sections_server = async () => {
   let articles = [];
   let error = null;
 
   try {
-    // Fetch data directly on the server
-    const res = await fetch(`${API_BASE_URL}/data/live-feed.json`, {
-      next: { revalidate: 600 }, // Revalidate data every 10 minutes
-    });
+    articles = await fetchData(
+      "/data/live-feed.json", // API endpoint
+      "public/data/live-feed.json" // Static file path
+    );
 
-    if (!res.ok) {
-      throw new Error(`Failed to fetch data: ${res.status} ${res.statusText}`);
-    }
-
-    const data = await res.json();
-    articles = data.results;
+    // Ensure articles is an array and has valid objects
+    articles = Array.isArray(articles.results) ? articles.results : [];
   } catch (e) {
     console.error("Error fetching data in Atf_sections_server:", e);
     error = "Failed to load data.";

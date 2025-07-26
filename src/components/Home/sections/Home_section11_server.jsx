@@ -1,26 +1,20 @@
-import axios from "axios";
+import { fetchData } from "utils/fetchData";
 import Home_section11 from "./Home_section11";
-
-// API base URL to environment variable
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
-
-// This function fetches the data on the server
-async function getWebstory() {
-  const res = await axios.get(`${API_BASE_URL}/data/webstories.json`);
-
-  // axios automatically parses JSON and provides it in res.data
-  return res.data.results;
-}
 
 const Home_section11_server = async () => {
   let homeWebstory = [];
   let error = null;
 
   try {
-    const allWebstory = await getWebstory();
-    homeWebstory = allWebstory.slice(0, 5); // Slice the data on the server
+    const data = await fetchData(
+      "/data/webstories.json", // API endpoint
+      "public/data/webstories.json" // Static file path
+    );
+
+    // Extract 'results' from the object if it exists
+    homeWebstory = Array.isArray(data.results) ? data.results.slice(0, 5) : [];
   } catch (err) {
-    //console.error("Error fetching Webstories:", err.message);
+    console.error("Error fetching Webstories in Home_section11_server:", err);
     error = "Failed to load Webstories.";
   }
 
