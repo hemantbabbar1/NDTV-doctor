@@ -1,5 +1,5 @@
 import React from "react";
-import { fetchData } from "../../../src/Utils/fetchData";
+import { fetchData } from "@/src/Utils/fetchData";
 
 // Importing components
 import News_listing_Client from "@/src/components/Common/Listing/News_listing_Client";
