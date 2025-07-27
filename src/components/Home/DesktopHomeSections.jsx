@@ -1,7 +1,9 @@
 import React from "react";
 import { ArticlesProvider } from "@/src/Context/ArticlesContext";
 
-//import home components
+//import Desktop home components css
+import "../../styles/css/pages-css/_home-page-styles.css"; //
+
 import Atf_sections_server from "./sections/Atf_sections_server";
 import Home_section1_server from "./sections/Home_section1_server";
 import Home_section2 from "./sections/Home_section2";
@@ -16,7 +18,7 @@ import Home_section10 from "./sections/Home_section10";
 import Home_section11_server from "./sections/Home_section11_server";
 import Taboola_home from "../Taboola/Taboola_home";
 
-const HomeSections = () => {
+const DesktopHomeSections = () => {
   return (
     <ArticlesProvider>
       {/* <!--====== Content ( LHS, Main Content and RHS ) ======--> */}
@@ -61,4 +63,4 @@ const HomeSections = () => {
   );
 };
 
-export default HomeSections;
+export default DesktopHomeSections;

@@ -1,24 +1,16 @@
 import React from "react";
+import { headers } from "next/headers"; // Import headers function
+import DesktopHomeSections from "../components/Home/DesktopHomeSections";
+import MobileHomeSections from "../components/Home/MobileHomeSections";
 
-//SEO for Page Title and description here
-export const metadata = {
-  title:
-    "Health Care News, Health and Fitness Tips, Diet Plan, Home Remedies, Heart, Pregnancy and Sexual Health advice", // <title>
-  description:
-    "NDTV Doctor is the one stop site for all your health needs providing most credible health information and tips with expert advice on healthy living, diet plans, diabetes, weight loss, heart, cancer, pregnancy, sexual health, beauty care tips, home remedies and benefits.।", // <meta name="description"> टैग के लिए
+const Page = async () => {
+  const requestHeaders = headers(); // Get headers
+  const userAgent = requestHeaders.get("user-agent") || ""; // Access user-agent
+
+  // Check if the user is on a mobile device
+  const isMobile = /mobile|android|iphone|ipad|tablet/i.test(userAgent);
+
+  return <>{isMobile ? <MobileHomeSections /> : <DesktopHomeSections />}</>; // Render based on user-agent
 };
 
-// Home CSS imports
-// import "../styles/css/base/home-header.css";
-import "../styles/css/pages-css/_home-page-styles.css";
-import HomeSections from "../components/Home/HomeSections";
-
-const Page = () => {
-  return (
-    <>
-      <HomeSections />
-    </>
-  );
-};
-
-export default Page; // Export the component
+export default Page;

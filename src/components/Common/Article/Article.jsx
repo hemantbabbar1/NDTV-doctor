@@ -1,3 +1,5 @@
+"use server";
+
 // src/components/Common/Article/Article.jsx
 import React from "react";
 import DOMPurify from "isomorphic-dompurify";
@@ -7,9 +9,10 @@ import PostBy from "./PostBy";
 import Ad_300X250_wap from "../Advertisement/Ad_300X250_wap";
 // import ReadInApp from "./ReadInApp";
 import Copy_Btn from "./Copy_Btn";
+
 import ShowMoreWAP from "./ShowMoreWAP";
 
-const Article = ({ articleData, error }) => {
+const Article = ({ articleData, error, isExpanded }) => {
   // Error Statement
   if (error) {
     return (
@@ -93,14 +96,14 @@ const Article = ({ articleData, error }) => {
                   <div className="sp_cap sp_b">{image_caption}</div>
                 )}
               </div>
-              <div className="Art-exp_cn">
+              <div className={`Art-exp_cn ${isExpanded ? "Art-exp_less" : ""}`}>
                 <div className="Art-exp_wr">
                   {sanitizedBody && (
                     <div dangerouslySetInnerHTML={{ __html: sanitizedBody }} />
                   )}
                   <Ad_300X250_wap />
                 </div>
-                <ShowMoreWAP />
+                <ShowMoreWAP isExpanded={isExpanded} />
               </div>
             </div>
           </div>

@@ -3,20 +3,7 @@ import React from "react";
 import Home_rhs from "@/src/components/Sidebar/Home_rhs";
 import Home_atf_story from "@/src/components/Home/Home_atf_story";
 
-// Context API for Articles
-//import { useArticles } from "@/src/context/ArticlesContext";
-
 const Atf_Sections = ({ articles, error }) => {
-  // if (loading) {
-  //   return (
-  //     <section className="section mt-5">
-  //       <div className="vjl-cntr text-center text-gray-500">
-  //         <p>Loading articles...</p>
-  //       </div>
-  //     </section>
-  //   );
-  // }
-
   if (error) {
     return (
       <section className="section mt-5">
