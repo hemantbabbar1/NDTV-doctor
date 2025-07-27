@@ -1,6 +1,6 @@
 import React from "react";
 import Global_Nav from "./Global_Nav";
-import { fetchData } from "utils/fetchData";
+import { fetchData } from "@/src/Utils/fetchData";
 
 // API base URL to environment variable
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;

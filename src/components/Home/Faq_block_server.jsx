@@ -1,7 +1,7 @@
 // This is a Server Component, so it doesn't have "use client"
 import React from "react";
 import Faq_block from "./Faq_block";
-import { fetchData } from "utils/fetchData";
+import { fetchData } from "@/src/Utils/fetchData";
 
 const Faq_block_server = async () => {
   let faqs = [];

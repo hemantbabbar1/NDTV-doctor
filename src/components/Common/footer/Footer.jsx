@@ -1,5 +1,4 @@
 import React from "react";
-// import "../../../../src/styles/css/elements/footer.css";
 import "../../../../src/styles/css/footer/footer1.css";
 
 import Footer_left from "./Footer_left";

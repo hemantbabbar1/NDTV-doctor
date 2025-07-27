@@ -1,6 +1,6 @@
 import React from "react";
 import Mobile_Subnav from "./Mobile_Subnav";
-import { fetchData } from "utils/fetchData";
+import { fetchData } from "@/src/Utils/fetchData";
 
 const Mobile_Subnav_server = async () => {
   let menuLinks = [];

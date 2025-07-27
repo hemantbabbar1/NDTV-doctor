@@ -1,6 +1,7 @@
 import React from "react";
 import { ArticlesProvider } from "./ArticlesContext";
-import { fetchData } from "utils/fetchData";
+import { fetchData } from "../Utils/fetchData";
+
 const ArticlesContext_server = async ({ children }) => {
   let articles = [];
   let error = null;

@@ -1,4 +1,4 @@
-import { fetchData } from "utils/fetchData";
+import { fetchData } from "@/src/Utils/fetchData";
 import Home_section9 from "./Home_section9";
 
 const Home_section9_server = async () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import Atf_Sections from "./Atf_sections";
-import { fetchData } from "utils/fetchData";
+import { fetchData } from "@/src/Utils/fetchData";
 
 const Atf_sections_server = async () => {
   let articles = [];

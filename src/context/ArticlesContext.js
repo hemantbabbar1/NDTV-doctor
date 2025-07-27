@@ -23,6 +23,7 @@ export const ArticlesProvider = ({
 
 export const useArticles = () => {
   const context = useContext(ArticlesContext);
+  console.log("useArticles context:", context); // Debugging log
   if (context === undefined) {
     throw new Error("useArticles must be used within an ArticlesProvider");
   }

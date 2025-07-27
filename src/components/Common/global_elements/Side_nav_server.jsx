@@ -1,6 +1,6 @@
 import React from "react";
 import Side_nav from "./Side_nav";
-import { fetchData } from "utils/fetchData";
+import { fetchData } from "@/src/Utils/fetchData";
 
 // This is a Server Component, so it doesn't have "use client"
 const Side_nav_server = async () => {

@@ -1,7 +1,7 @@
 // This is a Server Component, so it doesn't have "use client"
 import React from "react";
 import Recent_news from "./Recent_news";
-import { fetchData } from "utils/fetchData";
+import { fetchData } from "@/src/Utils/fetchData";
 
 const Recent_news_sever = async () => {
   let recentNews = [];

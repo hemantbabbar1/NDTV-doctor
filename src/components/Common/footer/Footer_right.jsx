@@ -1,24 +1,50 @@
 "use client";
-import React from "react";
-import { useFooterLinks } from "@/src/context/FooterLinksContext";
+import React, { useState, useEffect } from "react";
 import Footer_copyright from "./Footer_copyright";
+import { fetchData } from "@/src/Utils/fetchData";
 
 const Footer_right = () => {
-  const { mainLinks, extraLinks, loading, error } = useFooterLinks();
-  // Check if links is an array and has items
-  //if (!Array.isArray(links) || links.length === 0) return null; // If no links, return nothing or a placeholder
+  const [mainLinks, setMainLinks] = useState([]);
+  const [extraLinks, setExtraLinks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchFooterLinks = async () => {
+      try {
+        console.log("Fetching main links from Footer2016Bottom.json");
+        const mainLinksData = await fetchData(
+          "/data/Footer2016Bottom.json", // API endpoint
+          "public/data/Footer2016Bottom.json" // Static file path
+        );
+        console.log("Fetched main links data:", mainLinksData);
+        setMainLinks(mainLinksData);
+
+        console.log("Fetching extra links from footernewhp_hp2023_footer.json");
+        const extraLinksData = await fetchData(
+          "/data/footernewhp_hp2023_footer.json", // API endpoint
+          "public/data/footernewhp_hp2023_footer.json" // Static file path
+        );
+        console.log("Fetched extra links data:", extraLinksData);
+        setExtraLinks(extraLinksData);
+      } catch (err) {
+        console.error("Error fetching footer links:", err);
+        setError("Failed to load footer links.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFooterLinks();
+  }, []);
 
   // Handle loading and error states
   if (error) {
     return <p style={{ color: "red" }}>Error: {error}</p>;
   }
-  // If still loading, you can return a loading state
   if (loading) {
-    return null;
+    return <p>Loading...</p>;
   }
-
-  // Example debug log
-  //console.log("Footer_right links:", mainLinks);
 
   return (
     <>

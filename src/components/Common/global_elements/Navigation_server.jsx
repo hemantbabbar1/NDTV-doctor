@@ -1,6 +1,6 @@
 import React from "react";
 import Navigation from "./Navigation";
-import { fetchData } from "utils/fetchData";
+import { fetchData } from "@/src/Utils/fetchData";
 
 const Navigation_server = async () => {
   let menuLinks = [];

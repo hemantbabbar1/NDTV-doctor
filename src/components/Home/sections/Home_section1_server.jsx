@@ -1,5 +1,5 @@
 import React from "react";
-import { fetchData } from "utils/fetchData";
+import { fetchData } from "@/src/Utils/fetchData";
 import Home_section1 from "./Home_section1";
 
 const Home_section1_server = async () => {

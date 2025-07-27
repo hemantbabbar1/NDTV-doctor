@@ -9,8 +9,7 @@ import "../styles/css/taboola.css";
 
 // Context API for Articles for centralized state management
 import Global_elements from "../components/Common/global_elements/Global_elements";
-import ArticlesContext_server from "../context/ArticlesContext_server";
-import FooterLinksContext_server from "../context/FooterLinksContext_server";
+import { ArticlesProvider } from "../Context/ArticlesContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,7 +17,7 @@ const inter = Inter({
   variable: "--ff-one",
 });
 
-// पूरी साइट को noindex करने के लिए यह metadata ऑब्जेक्ट एक्सपोर्ट करें
+// For No Index through all site
 export const metadata = {
   robots: {
     index: false,
@@ -35,17 +34,14 @@ export const metadata = {
   // title: "Your Site Title (NoIndex)",
   // description: "This site is currently not intended for search engine indexing.",
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body cz-shortcut-listen="true" className="">
         <Atf_Symbols />
         <Header />
-        <ArticlesContext_server>{children}</ArticlesContext_server>
-        <FooterLinksContext_server>
-          <Footer />
-        </FooterLinksContext_server>
+        <ArticlesProvider>{children}</ArticlesProvider>
+        <Footer />
         <Global_elements />
       </body>
     </html>
