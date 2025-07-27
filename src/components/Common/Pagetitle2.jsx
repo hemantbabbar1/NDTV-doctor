@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/css/widgets/title-widget-2.css";
+import "../../Styles/css/widgets/title-widget-2.css";
 
 const Pagetitle2 = ({ title }) => {
   return (
