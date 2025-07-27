@@ -1,5 +1,5 @@
 import React from "react";
-import { fetchData } from "@/src/Utils/fetchData";
+import { fetchData } from "../../../src/Utils/fetchData";
 
 // import "../../styles/css/widgets/title-widget-2.css";
 // import "../../styles/css/widgets/title-widget-3.css";

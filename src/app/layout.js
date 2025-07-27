@@ -1,6 +1,6 @@
 // import "./globals.css";
 import { Inter } from "next/font/google";
-import { Atf_Symbols } from "@/src/components/Common/Atf_Symbols";
+import { Atf_Symbols } from "../components/Common/Atf_Symbols";
 import Header from "../components/Common/Header";
 import Footer from "../components/Common/footer/Footer";
 

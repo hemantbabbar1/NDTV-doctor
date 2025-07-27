@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Footer_copyright from "./Footer_copyright";
-import { fetchData } from "@/src/Utils/fetchData";
+import { fetchData } from "../../../../src/Utils/fetchData";
 
 const Footer_right = () => {
   const [mainLinks, setMainLinks] = useState([]);

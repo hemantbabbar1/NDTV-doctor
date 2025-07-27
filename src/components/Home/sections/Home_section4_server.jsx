@@ -1,7 +1,6 @@
 import React from "react";
 import Home_section4 from "./Home_section4";
-import { fetchData } from "@/src/Utils/fetchData"; // Import fetchData helper function
-
+import { fetchData } from "../../../Utils/fetchData";
 const Home_section4_server = async () => {
   let allData = [];
   let error = null;
