@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../../src/styles/css/footer/footer1.css";
+import "../../../../src/Styles/css/footer/footer1.css";
 
 import Footer_left from "./Footer_left";
 import Footer_right from "./Footer_right";

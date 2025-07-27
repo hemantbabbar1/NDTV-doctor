@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../styles/css/elements/BMI-form.css";
+import "../../../Styles/css/elements/BMI-form.css";
 import Image from "next/image";
 import Title1 from "../Title1";
 

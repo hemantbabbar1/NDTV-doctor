@@ -3,9 +3,9 @@
 import React from "react";
 import Link from "next/link";
 
-import "../../../styles/css/header/sub-nav.css";
-import "../../../styles/css/header/sub-nav-mb.css";
-// import "../../../styles/css/header/sub-bottom-nav.css";
+import "../../../Styles/css/header/sub-nav.css";
+import "../../../Styles/css/header/sub-nav-mb.css";
+// import "../../../Styles/css/header/sub-bottom-nav.css";
 
 export const Mobile_Subnav = ({ menuLinks, error }) => {
   if (error) return <div style={{ color: "red" }}>Error: {error}</div>;

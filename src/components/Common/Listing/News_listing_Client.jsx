@@ -4,8 +4,8 @@ import News_listing from "./News_listing";
 import { SlArrowDown } from "react-icons/sl";
 import Link from "next/link";
 
-import "../../../styles/css/elements.css";
-import "../../../styles/css/loader-list.css";
+import "../../../Styles/css/elements.css";
+import "../../../Styles/css/loader-list.css";
 
 const News_listing_Client = ({ listingnews }) => {
   // State to manage visible news count and loading state

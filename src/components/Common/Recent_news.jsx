@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import "../../styles/css/widgets/side-widget.css";
+import "../../Styles/css/widgets/side-widget.css";
 import Sidebar_Tittle from "../Sidebar/Sidebar_Tittle";
 
 const Recent_news = ({ recentNews, error }) => {

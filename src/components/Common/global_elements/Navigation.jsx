@@ -3,10 +3,10 @@
 import React from "react";
 import Link from "next/link";
 
-import "../../../styles/css/header/main-nav.css";
-import "../../../styles/css/header/main-nav-color.css";
-import "../../../styles/css/header/doctor/base/main-nav-color.css";
-import "../../../styles/css/header/list-dropdown.css";
+import "../../../Styles/css/header/main-nav.css";
+import "../../../Styles/css/header/main-nav-color.css";
+import "../../../Styles/css/header/doctor/base/main-nav-color.css";
+import "../../../Styles/css/header/list-dropdown.css";
 
 const Navigation = ({ menuLinks, error }) => {
   if (error) {

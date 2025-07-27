@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import "../../../styles/css/header/setting-dropdown.css";
+import "../../../Styles/css/header/setting-dropdown.css";
 
 export const Humbernav = () => {
   // This function will be called when the trigger is clicked.

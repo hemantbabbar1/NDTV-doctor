@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Side_nav_social from "./Side_nav_social";
-import "../../../styles/css/common/slide-nav.css";
+import "../../../Styles/css/common/slide-nav.css";
 
 const Side_nav = ({ allData, error, loopNav1, loopNav2, loopNav3 }) => {
   //Remove Side Nav if its open

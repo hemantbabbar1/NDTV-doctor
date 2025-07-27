@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../styles/css/advertisement.css";
+import "../../../Styles/css/advertisement.css";
 
 const Ad_300X250_wap = () => {
   return (

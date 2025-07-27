@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/css/widgets/seo-text-bottom.css";
+import "../../Styles/css/widgets/seo-text-bottom.css";
 
 const Seo_widget = ({ articleData, error }) => {
   const { tags = [] } = articleData || {};

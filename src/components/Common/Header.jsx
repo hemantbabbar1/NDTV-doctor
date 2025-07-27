@@ -5,29 +5,29 @@ import Mobile_Subnav_server from "./global_elements/Mobile_Subnav_server";
 import Humbernav from "./global_elements/Humbernav";
 import Navigation_server from "./global_elements/Navigation_server";
 
-import "../../styles/css/header/ndtv-col.css";
-import "../../styles/css/header/doctor/base/base.css";
-import "../../styles/css/header/doctor/base/base-ai.css";
-import "../../styles/css/base/base-doctor.css";
-import "../../styles/css/header/fonts-atf.css";
-import "../../styles/css/header/header.css";
-import "../../styles/css/header/header-icons.css";
-// import "../../styles/css/header/global-nav-ad-top.css";
-import "../../styles/css/widgets/dropdown/global-nav.css";
-import "../../styles/css/widgets/dropdown/get-app.css";
+import "../../Styles/css/header/ndtv-col.css";
+import "../../Styles/css/header/doctor/base/base.css";
+import "../../Styles/css/header/doctor/base/base-ai.css";
+import "../../Styles/css/base/base-doctor.css";
+import "../../Styles/css/header/fonts-atf.css";
+import "../../Styles/css/header/header.css";
+import "../../Styles/css/header/header-icons.css";
+// import "../../Styles/css/header/global-nav-ad-top.css";
+import "../../Styles/css/widgets/dropdown/global-nav.css";
+import "../../Styles/css/widgets/dropdown/get-app.css";
 
-import "../../styles/css/tooltip.css";
-import "../../styles/css/hr-scroll.css";
-import "../../styles/css/img-gratio.css";
-import "../../styles/css/overlay.css";
-import "../../styles/css/helper.css";
+import "../../Styles/css/tooltip.css";
+import "../../Styles/css/hr-scroll.css";
+import "../../Styles/css/img-gratio.css";
+import "../../Styles/css/overlay.css";
+import "../../Styles/css/helper.css";
 
 // ATF
-import "../../styles/css/responsive/responsive-atf.css";
-import "../../styles/css/responsive/responsive-desktop-atf.css";
+import "../../Styles/css/responsive/responsive-atf.css";
+import "../../Styles/css/responsive/responsive-desktop-atf.css";
 // BTF
-import "../../styles/css/responsive/responsive-btf.css";
-import "../../styles/css/responsive/responsive-desktop-btf.css";
+import "../../Styles/css/responsive/responsive-btf.css";
+import "../../Styles/css/responsive/responsive-desktop-btf.css";
 
 const Header = () => {
   return (

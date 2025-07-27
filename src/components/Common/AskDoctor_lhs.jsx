@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/css/elements/ask-doctor-widget.css";
+import "../../Styles/css/elements/ask-doctor-widget.css";
 import Link from "next/link";
 import Image from "next/image";
 

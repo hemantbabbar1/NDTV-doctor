@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/css/widgets/side-widget-home.css";
+import "../../Styles/css/widgets/side-widget-home.css";
 import Link from "next/link";
 import { fetchLiveArticles } from "@/src/Utils/fetchLiveArticles";
 

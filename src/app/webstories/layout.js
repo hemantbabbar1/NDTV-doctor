@@ -1,6 +1,6 @@
-import "../../styles/css/base/home-header.css";
-import "../../styles/css/base/base-doctor.css";
-import "../../styles/css/helper.css";
+import "../../Styles/css/base/home-header.css";
+import "../../Styles/css/base/base-doctor.css";
+import "../../Styles/css/helper.css";
 
 import Breadcrumbs from "@/src/components/Common/Breadcrumbs";
 import Lhs_sidebar from "@/src/components/Sidebar/Lhs_sidebar";

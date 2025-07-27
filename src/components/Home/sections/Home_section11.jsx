@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Title1 from "../Title1";
-import "../../../styles/css/widgets/hr-list1.css";
+import "../../../Styles/css/widgets/hr-list1.css";
 import Webstories_card from "../../Common/gallery/Webstories_card";
 
 const Home_section11 = ({ homeWebstory }) => {

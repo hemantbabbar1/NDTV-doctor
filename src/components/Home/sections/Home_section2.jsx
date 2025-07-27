@@ -1,6 +1,6 @@
 import React from "react";
 import Trending_news from "../../Common/Trending_news";
-import "../../../styles/css/elements/doctor-faq.css";
+import "../../../Styles/css/elements/doctor-faq.css";
 import Home_faq_block_server from "../Faq_block_server";
 
 const Home_faq = () => {

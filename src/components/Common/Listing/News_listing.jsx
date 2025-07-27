@@ -1,4 +1,4 @@
-import "../../../styles/css/elements/news-listing.css";
+import "../../../Styles/css/elements/news-listing.css";
 
 import Social_share from "@/src/components/Common/Social_share";
 import Image from "next/image";

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Title1 from "../Title1";
-import "../../../styles/css/elements/tb-tab.css";
+import "../../../Styles/css/elements/tb-tab.css";
 import Link from "next/link";
 import Image from "next/image";
 

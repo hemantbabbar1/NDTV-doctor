@@ -1,7 +1,7 @@
 // "use client";
 
 import React from "react";
-import "@/src/styles/css/elements/find-health-solution.css";
+import "@/src/Styles/css/elements/find-health-solution.css";
 import Title1 from "@/src/components/Home/Title1";
 import Link from "next/link"; // Added Link component for internal navigation
 

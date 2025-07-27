@@ -2,7 +2,7 @@ import React from "react";
 import { ArticlesProvider } from "@/src/Context/ArticlesContext";
 
 //import Desktop home components css
-import "../../styles/css/pages-css/_home-page-styles.css"; //
+import "../../Styles/css/pages-css/_home-page-styles.css"; //
 
 import Atf_sections_server from "./sections/Atf_sections_server";
 import Home_section1_server from "./sections/Home_section1_server";

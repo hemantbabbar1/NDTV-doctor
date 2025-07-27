@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../styles/css/elements/baby-name-finder.css";
+import "../../../Styles/css/elements/baby-name-finder.css";
 import Title1 from "../Title1";
 
 const Home_section7 = () => {
