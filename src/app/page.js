@@ -4,7 +4,7 @@ import DesktopHomeSections from "../components/Home/DesktopHomeSections";
 import MobileHomeSections from "../components/Home/MobileHomeSections";
 
 const Page = async () => {
-  const requestHeaders = headers(); // Get headers
+  const requestHeaders = await headers(); // Await headers
   const userAgent = requestHeaders.get("user-agent") || ""; // Access user-agent
 
   // Check if the user is on a mobile device

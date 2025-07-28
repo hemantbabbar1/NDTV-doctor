@@ -1,5 +1,9 @@
 import axios from "axios";
-import { config } from "./config";
+import path from "path";
+import { config } from "../Utils/config.js";
+
+console.log("Current Directory:", process.cwd());
+console.log("Config Path:", path.resolve(import.meta.url, "../config.js"));
 
 export const fetchData = async (
   apiEndpoint,
