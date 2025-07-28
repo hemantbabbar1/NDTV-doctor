@@ -17,6 +17,7 @@ export const fetchData = async (
       const path = require("path");
       const filePath = path.join(process.cwd(), staticFilePath);
       const fileData = await fs.readFile(filePath, "utf-8");
+      console.log("SSR Debugging:", process.cwd());
       console.log(
         "Current SSR Directory:",
         path.join(process.cwd(), staticFilePath)
