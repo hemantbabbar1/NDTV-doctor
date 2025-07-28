@@ -8,7 +8,7 @@ const Navigation_server = async () => {
 
   try {
     menuLinks = await fetchData(
-      "/data/navLinks.json", // API endpoint
+      "https://ndtv-doctor.vercel.app/data/navLinks.json", // API endpoint
       "public/data/navLinks.json" // Static file path
     );
   } catch (e) {
