@@ -10,49 +10,30 @@ export const fetchData = async (
   try {
     if (typeof window === "undefined") {
       console.log("Server-side logic is running...");
-      // Server-side logic
-      const fs = require("fs/promises");
-      const filePath = path.join(process.cwd(), staticFilePath);
-      const fileData = await fs.readFile(filePath, "utf-8");
-      console.log("SSR Debugging:", process.cwd());
-      console.log(
-        "Current SSR Directory:",
-        path.join(process.cwd(), staticFilePath)
-      );
-      if (format === "json") {
-        return JSON.parse(fileData); // Parse as JSON
-      } else {
-        return fileData; // Return as plain text
+      try {
+        const fs = require("fs/promises");
+        const filePath = path.join(process.cwd(), staticFilePath);
+        const fileData = await fs.readFile(filePath, "utf-8");
+        console.log("Static file read successfully:", filePath);
+        return format === "json" ? JSON.parse(fileData) : fileData;
+      } catch (error) {
+        console.error("Error reading static file, falling back to API:", error);
+        const fullUrl = `${config.apiBaseUrl}${apiEndpoint}`;
+        const response = await axios.get(fullUrl);
+        return format === "json" ? response.data : response.data;
       }
     } else {
       console.log("Client-side logic is running...");
-      console.log("Current CSR Directory:", path.resolve(staticFilePath));
-      // Client-side logic
-      console.log("API Base URL:", config.apiBaseUrl); // Debugging log
-      console.log("API Endpoint:", apiEndpoint); // Debugging log
       const fullUrl = `${config.apiBaseUrl}${apiEndpoint}`;
-      console.log("Constructed URL:", fullUrl); // Debugging log
-
-      // Validate URL
-      try {
-        new URL(fullUrl); // Throws if URL is invalid
-      } catch (urlError) {
-        throw new Error(`Invalid URL: ${fullUrl}`);
-      }
-
       const response = await axios.get(fullUrl);
-      if (format === "json") {
-        return response.data; // Assume JSON response
-      } else {
-        return response.data; // Return as plain text
-      }
+      return format === "json" ? response.data : response.data;
     }
   } catch (error) {
     console.error(
       "Error fetching data:",
       error.response?.status || "No status available",
       error.response?.data || "No data available",
-      error.message // Log the error message for additional context
+      error.message
     );
     throw new Error("Failed to fetch data.");
   }
