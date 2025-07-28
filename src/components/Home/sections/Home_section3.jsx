@@ -21,7 +21,7 @@ const Pregnancy_solution = () => {
         setArticles(data);
       } catch (err) {
         console.error("Error fetching articles:", err);
-        setError("Failed to load articles.");
+        setError("Failed to load articles1.");
       } finally {
         setLoading(false);
       }

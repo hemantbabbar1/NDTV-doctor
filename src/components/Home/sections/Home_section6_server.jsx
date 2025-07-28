@@ -8,7 +8,7 @@ const Home_section6_server = async () => {
 
   try {
     const allArticles = await fetchData(
-      "/api/videos", // API endpoint
+      "/data/Fitness-Excericise-Top-Stories1.json", // API endpoint
       "public/data/Fitness-Excericise-Top-Stories1.json" // Static file path
     );
 
