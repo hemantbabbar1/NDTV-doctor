@@ -17,14 +17,17 @@ export const fetchData = async (
       const path = require("path");
       const filePath = path.join(process.cwd(), staticFilePath);
       const fileData = await fs.readFile(filePath, "utf-8");
-      console.log("Current Directory:", process.cwd());
+      console.log(
+        "Current SSR Directory:",
+        path.join(process.cwd(), staticFilePath)
+      );
       if (format === "json") {
         return JSON.parse(fileData); // Parse as JSON
       } else {
         return fileData; // Return as plain text
       }
     } else {
-      console.log("Resolved Path:", path.resolve(staticFilePath));
+      console.log("Current CSR Directory:", path.resolve(staticFilePath));
       // Client-side logic
       console.log("API Base URL:", config.apiBaseUrl); // Debugging log
       console.log("API Endpoint:", apiEndpoint); // Debugging log
