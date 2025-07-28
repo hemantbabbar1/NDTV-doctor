@@ -1,9 +1,8 @@
 import axios from "axios";
-import path from "path";
-import { config } from "../Utils/config.js";
+import { config } from "./config.js";
 
 console.log("Current Directory:", process.cwd());
-console.log("Config Path:", path.resolve(import.meta.url, "../config.js"));
+console.log("Config Path:", "./config.js"); // क्लाइंट-साइड में डायरेक्ट पाथ का उपयोग करें
 
 export const fetchData = async (
   apiEndpoint,
