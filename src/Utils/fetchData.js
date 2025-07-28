@@ -2,9 +2,6 @@ import axios from "axios";
 import { config } from "./config.js";
 import path from "path";
 
-//console.log("Current Directory:", process.cwd());
-//console.log("Config Path:", "./config.js"); // क्लाइंट-साइड में डायरेक्ट पाथ का उपयोग करें
-
 export const fetchData = async (
   apiEndpoint,
   staticFilePath,
@@ -12,9 +9,9 @@ export const fetchData = async (
 ) => {
   try {
     if (typeof window === "undefined") {
+      console.log("Server-side logic is running...");
       // Server-side logic
       const fs = require("fs/promises");
-      const path = require("path");
       const filePath = path.join(process.cwd(), staticFilePath);
       const fileData = await fs.readFile(filePath, "utf-8");
       console.log("SSR Debugging:", process.cwd());
@@ -28,6 +25,7 @@ export const fetchData = async (
         return fileData; // Return as plain text
       }
     } else {
+      console.log("Client-side logic is running...");
       console.log("Current CSR Directory:", path.resolve(staticFilePath));
       // Client-side logic
       console.log("API Base URL:", config.apiBaseUrl); // Debugging log

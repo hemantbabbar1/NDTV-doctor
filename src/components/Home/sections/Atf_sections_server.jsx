@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Atf_Sections from "./Atf_sections";
 import { fetchData } from "@/src/Utils/fetchData";
