@@ -80,13 +80,13 @@
   display: inline-block;
   float: left;
   margin: 0;
-  padding: 0 15px 0;
+  padding: 0 15px 0 12px;
   position: absolute;
   left: 0;
   top: 2px;
   height: 40px;
-  font-size: 14px;
-  color: var(--vj-cl-dr1);
+  font-size: 18px;
+  color: var(--vj-cl-dr);
 }
 
 .Dcttl2_inp-cls {

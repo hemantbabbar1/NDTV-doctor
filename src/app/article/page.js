@@ -19,8 +19,8 @@ import "../../Styles/css/article/tags.css";
 import "../../Styles/css/article/published-drop.css";
 
 // Importing components
-import Article from "@/src/components/Common/Article/Article";
-import Seo_widget from "@/src/components/Common/Seo_widget";
+import Article from "@/src/components/Pages/Article/Article";
+import SeoWidget from "@/src/components/Common/SeoWidget";
 
 // Page component for article
 const page = async () => {
@@ -44,7 +44,7 @@ const page = async () => {
         <Article articleData={articleData} error={error} />
 
         {/* SEO Text bottom */}
-        <Seo_widget articleData={articleData} error={error} />
+        <SeoWidget articleData={articleData} error={error} />
       </div>
     </>
   );

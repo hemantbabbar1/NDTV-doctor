@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-const Copy_Btn = ({ urlToCopy = "" }) => {
+const CopyBtn = ({ urlToCopy = "" }) => {
   const [copied, setCopied] = useState(false); // कॉपी स्थिति को ट्रैक करने के लिए
 
   const handleCopyClick = async () => {
@@ -60,4 +60,4 @@ const Copy_Btn = ({ urlToCopy = "" }) => {
   );
 };
 
-export default Copy_Btn;
+export default CopyBtn;

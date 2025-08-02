@@ -1,7 +1,7 @@
 import React from "react";
 import "../../Styles/css/widgets/seo-text-bottom.css";
 
-const Seo_widget = ({ articleData, error }) => {
+const SeoWidget = ({ articleData, error }) => {
   const { tags = [] } = articleData || {};
   articleData;
 
@@ -105,4 +105,4 @@ const Seo_widget = ({ articleData, error }) => {
   );
 };
 
-export default Seo_widget;
+export default SeoWidget;

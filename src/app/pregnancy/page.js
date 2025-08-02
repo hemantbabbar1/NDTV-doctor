@@ -2,7 +2,7 @@ import React from "react";
 import { fetchData } from "@/src/Utils/fetchData";
 
 // Importing components
-import News_listing_Client from "@/src/components/Common/Listing/News_listing_Client";
+import News_listing_Client from "@/src/components/Pages/Listing/News_listing_Client";
 import Pagetitle2 from "@/src/components/Common/Pagetitle2";
 
 // Page component for listing
@@ -25,7 +25,7 @@ const page = async () => {
     <>
       <div className="LstPg_cnt">
         {/* Page title */}
-        <Pagetitle2 title="Listing" />
+        <Pagetitle2 title="Pregnancy" />
 
         {/* Error if Data is not coming through API */}
         {error ? (

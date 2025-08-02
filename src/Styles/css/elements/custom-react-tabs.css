@@ -1,0 +1,40 @@
+/* Override Tab styles */
+
+.react-tabs {
+  float: left;
+  width: 100%;
+}
+
+.react-tabs__tab {
+  font-size: 16px;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.react-tabs__tab--selected {
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+.react-tabs__tab:focus {
+  outline: none;
+}
+
+/* Override TabList styles */
+.react-tabs__tab-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Override TabPanel styles */
+.react-tabs__tab-panel {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}

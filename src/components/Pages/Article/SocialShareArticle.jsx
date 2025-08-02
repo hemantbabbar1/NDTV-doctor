@@ -6,9 +6,9 @@ import { FaXTwitter, FaYoutube, FaFacebook } from "react-icons/fa6";
 import { RiWhatsappFill } from "react-icons/ri";
 import { FaRedditAlien } from "react-icons/fa";
 
-import "../../Styles/css/elements/social-dropdown.css";
+import "../../../Styles/css/elements/social-dropdown.css";
 
-const Social_share = ({ articleData, error }) => {
+const SocialShareArticle = ({ articleData, error }) => {
   // Data Destructure
   const { title = "", excerpt = "", link = "" } = articleData || {};
 
@@ -115,4 +115,4 @@ const Social_share = ({ articleData, error }) => {
   );
 };
 
-export default Social_share;
+export default SocialShareArticle;

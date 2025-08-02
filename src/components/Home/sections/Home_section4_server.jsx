@@ -1,28 +1,22 @@
 import React from "react";
-import Home_section4 from "./Home_section4";
+import Home_section4 from "@/src/components/Home/sections/Home_section4";
 import { fetchLiveArticles } from "@/src/Utils/fetchLiveArticles";
 
 const Home_section4_server = async () => {
-  //const [articles, setArticles] = useState([]); // Define state for articles
-  let allData = [];
+  let articles = [];
   let error = null;
 
   try {
-    // Use fetchLiveArticles to fetch data
+    // Fetch data on the server side
     const data = await fetchLiveArticles();
-
-    // Ensure data.results is valid
-    allData = Array.isArray(data.results) ? data.results : [];
-    //setArticles(data); // Update state
-  } catch (e) {
-    console.error("Error fetching live feed data in Home_section4_server:", e);
-    error = "Failed to load data.4";
+    articles = Array.isArray(data) ? data : [];
+  } catch (err) {
+    //console.error("Error fetching articles on the server:", err);
+    error = "Failed to load articles.";
   }
 
-  return (
-    // Pass the fetched data and error as props to the Client Component
-    <Home_section4 allData={allData} error={error} />
-  );
+  // Pass the fetched data and error as props to the Client Component
+  return <Home_section4 allData={articles} error={error} />;
 };
 
 export default Home_section4_server;

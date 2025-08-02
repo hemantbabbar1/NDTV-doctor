@@ -1,11 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import News_listing from "./News_listing";
-import { SlArrowDown } from "react-icons/sl";
-import Link from "next/link";
-
-import "../../../Styles/css/elements.css";
-import "../../../Styles/css/loader-list.css";
+import LoadMoreButton from "../../Common/LoadMoreButton";
 
 const News_listing_Client = ({ listingnews }) => {
   // State to manage visible news count and loading state
@@ -45,24 +41,7 @@ const News_listing_Client = ({ listingnews }) => {
         fadeInRange={fadeInRange}
       />
       {visibleCount < listingnews.length && (
-        <div className="btn_bm-cntr mb-20">
-          <Link
-            className="btn_bm"
-            href="#"
-            onClick={handleMoreNews}
-            disabled={loading}
-          >
-            More News
-            <SlArrowDown className="vj_icn vj_arrow-down" />
-          </Link>
-          {loading && (
-            <div className="lodr_wrp">
-              <div className="lodr_dot" />
-              <div className="lodr_dot" />
-              <div className="lodr_dot" />
-            </div>
-          )}
-        </div>
+        <LoadMoreButton onClick={handleMoreNews} loading={loading} />
       )}
     </>
   );

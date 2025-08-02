@@ -11,6 +11,9 @@ const Home_section4 = ({ allData, error }) => {
   const categories = ["Women", "Men", "Kids"];
   const [activeTab, setActiveTab] = useState(0);
 
+  // Log the allData prop to debug its value
+  console.log("allData in Home_section4:", allData);
+
   if (error) {
     return (
       <section className="section_two">
@@ -25,7 +28,7 @@ const Home_section4 = ({ allData, error }) => {
     return (
       <section className="section_two">
         <div className="vjl-cntr text-center text-gray-500">
-          <p>No content available.</p>
+          <p>No content available1.</p>
         </div>
       </section>
     );

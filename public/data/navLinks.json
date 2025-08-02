@@ -7,10 +7,17 @@
   },
   {
     "id": "1",
-    "path": "https://www.ndtv.com/",
+    "path": "/pregnancy",
     "name": "Pregancy",
     "children": []
   },
+  {
+    "id": "4",
+    "path": "/webstories",
+    "name": "Web Stories",
+    "children": []
+  },
+
   {
     "id": "2",
     "path": "/faq",
@@ -23,12 +30,7 @@
     "name": "Videos",
     "children": []
   },
-  {
-    "id": "4",
-    "path": "/webstories",
-    "name": "Web Stories",
-    "children": []
-  },
+
   {
     "id": "5",
     "path": "/photos",

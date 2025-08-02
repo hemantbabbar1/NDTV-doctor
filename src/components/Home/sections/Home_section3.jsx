@@ -1,43 +1,19 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Title1 from "../Title1";
-// Import fetchLiveArticles from fetchLiveArticles.js
-import { fetchLiveArticles } from "@/src/Utils/fetchLiveArticles";
 
-const Pregnancy_solution = () => {
-  // State variables for articles, error, and loading
-  const [articles, setArticles] = useState([]);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchArticles = async () => {
-      try {
-        // Fetch articles using fetchLiveArticles
-        const data = await fetchLiveArticles();
-        setArticles(data);
-      } catch (err) {
-        console.error("Error fetching articles:", err);
-        setError("Failed to load articles1.");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    // Trigger the fetchArticles function
-    fetchArticles();
-  }, []);
-
-  // Handle loading or error states before attempting to render articles
+const Pregnancy_solution = ({ articles, error }) => {
+  // Handle error state
   if (error) {
     return <p>Error loading articles: {error}</p>;
   }
 
-  if (loading) {
-    return <p>Loading articles...</p>;
+  // Handle empty articles
+  if (!articles || articles.length === 0) {
+    return <p>No articles available.</p>;
   }
 
   // Access the 15th article (index 14) from the fetched array

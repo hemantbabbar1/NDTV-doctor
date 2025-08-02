@@ -1,3 +1,9 @@
+/* News Listing Image Responsive Fix for Next.js <Image> */
+.NwsLstPg_img-full {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 .img-gr {
   background-color: var(--vj-cl-lg1);
   background: url("https://drop.ndtv.com/test/vj-ndtv/html/placeholder/v1.2/logo-placeholder.svg")
@@ -17,16 +23,15 @@
 .img-gr video,
 .img-gr svg,
 .img-gr iframe,
-.img-gr amp-img,
-.img-gr .x {
+.img-gr amp-img {
   /*background-color: #f1f3f7;*/
   color: rgba(0, 0, 0, 0);
   left: 0;
-  min-height: 100%;
   object-fit: cover;
   position: absolute;
   top: 0;
   width: 100%;
+  height: auto;
   /* transform: translateY(0); */
   /* filter: brightness(0.9) saturate(1.03) contrast(1.03);*/
 }
@@ -55,6 +60,7 @@
 
 .img-gr_auto img {
   width: 100%;
+  height: auto;
 }
 
 .img-gr_sq {
@@ -98,3 +104,8 @@ data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPH
     background: url("../images/logo-placeholder.svg") no-repeat center var(--vj-cl-lg1);
     background-size: 69px;
 }*/
+
+.img-responsive {
+  width: auto;
+  height: auto;
+}

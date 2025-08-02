@@ -2,7 +2,7 @@
 
 import React from "react";
 
-const ShowMoreWAP = () => {
+const ShowMoreWap = () => {
   const ShowMoreWAPToogle = () => {
     // Access the <body> element directly using document.body
     // classList.toggle() adds the class if it's not present, and removes it if it is.
@@ -23,4 +23,4 @@ const ShowMoreWAP = () => {
   );
 };
 
-export default ShowMoreWAP;
+export default ShowMoreWap;

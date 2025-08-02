@@ -19,9 +19,13 @@ const Home_section11 = ({ homeWebstory }) => {
             <div className="vjl-md-12">
               <ul className="Hrlst5_ul Hrlst5_ul-5 mb-15 WsNsLst_wr">
                 {homeWebstory &&
-                  homeWebstory.map((webstory) => (
-                    <li className="Hrlst5_li" key={webstory.id}>
-                      <Webstories_card webstory={webstory} />
+                  homeWebstory.map((Hmwebstory) => (
+                    <li className="Hrlst5_li" key={Hmwebstory.id}>
+                      {/* Use the Webstories_card component */}
+                      <Webstories_card
+                        webstory={Hmwebstory}
+                        dropDirection="top"
+                      />
                     </li>
                   ))}
               </ul>

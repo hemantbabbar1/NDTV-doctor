@@ -12,23 +12,23 @@ const Footer_right = () => {
   useEffect(() => {
     const fetchFooterLinks = async () => {
       try {
-        console.log("Fetching main links from Footer2016Bottom.json");
+        //console.log("Fetching main links from Footer2016Bottom.json");
         const mainLinksData = await fetchData(
           "/data/Footer2016Bottom.json", // API endpoint
           "public/data/Footer2016Bottom.json" // Static file path
         );
-        console.log("Fetched main links data:", mainLinksData);
+        //console.log("Fetched main links data:", mainLinksData);
         setMainLinks(mainLinksData);
 
-        console.log("Fetching extra links from footernewhp_hp2023_footer.json");
+        //console.log("Fetching extra links from footernewhp_hp2023_footer.json");
         const extraLinksData = await fetchData(
           "/data/footernewhp_hp2023_footer.json", // API endpoint
           "public/data/footernewhp_hp2023_footer.json" // Static file path
         );
-        console.log("Fetched extra links data:", extraLinksData);
+        //console.log("Fetched extra links data:", extraLinksData);
         setExtraLinks(extraLinksData);
       } catch (err) {
-        console.error("Error fetching footer links:", err);
+        //console.error("Error fetching footer links:", err);
         setError("Failed to load footer links.");
       } finally {
         setLoading(false);

@@ -6,6 +6,13 @@ export const fetchLiveArticles = async () => {
       "/data/live-feed.json", // API endpoint
       "public/data/live-feed.json" // Static file path
     );
+
+    // Log the raw data fetched by fetchData to debug its value
+    //console.log("Raw data fetched by fetchData:", data);
+
+    // Log the results array to ensure it is being returned correctly
+    //console.log("Returning results from fetchLiveArticles:", data.results);
+
     return data.results; // Provide the complete array
   } catch (error) {
     console.error("Error fetching trending articles:", error);

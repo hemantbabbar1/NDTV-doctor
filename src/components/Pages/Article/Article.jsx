@@ -3,14 +3,13 @@
 // src/components/Common/Article/Article.jsx
 import React from "react";
 import DOMPurify from "isomorphic-dompurify";
-import Social_share_article from "../Social_share_article";
+import SocialShareArticle from "./SocialShareArticle";
 import Image from "next/image";
 import PostBy from "./PostBy";
-import Ad_300X250_wap from "../Advertisement/Ad_300X250_wap";
+import Ad_300X250_wap from "../../Common/Advertisement/Ad_300X250_wap";
 // import ReadInApp from "./ReadInApp";
-import Copy_Btn from "./Copy_Btn";
-
-import ShowMoreWAP from "./ShowMoreWAP";
+import CopyBtn from "./CopyBtn";
+import ShowMoreWap from "./ShowMoreWap";
 
 const Article = ({ articleData, error, isExpanded }) => {
   // Error Statement
@@ -66,12 +65,9 @@ const Article = ({ articleData, error, isExpanded }) => {
                   </div>
                 </div>
                 <div className="pst_icn-btn">
-                  <Social_share_article
-                    articleData={articleData}
-                    error={error}
-                  />
+                  <SocialShareArticle articleData={articleData} error={error} />
                   {/* <ReadInApp /> */}
-                  <Copy_Btn urlToCopy={link} />
+                  <CopyBtn urlToCopy={link} />
                   {/* <Comment_Btn /> */}
                 </div>
               </div>
@@ -103,7 +99,7 @@ const Article = ({ articleData, error, isExpanded }) => {
                   )}
                   <Ad_300X250_wap />
                 </div>
-                <ShowMoreWAP isExpanded={isExpanded} />
+                <ShowMoreWap isExpanded={isExpanded} />
               </div>
             </div>
           </div>

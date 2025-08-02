@@ -1,7 +1,3 @@
-import "../../Styles/css/base/home-header.css";
-import "../../Styles/css/base/base-doctor.css";
-import "../../Styles/css/helper.css";
-
 import Breadcrumbs from "@/src/components/Common/Breadcrumbs";
 import Lhs_sidebar from "@/src/components/Sidebar/Lhs_sidebar";
 import Rhs_sidebar from "@/src/components/Sidebar/Rhs_sidebar";
