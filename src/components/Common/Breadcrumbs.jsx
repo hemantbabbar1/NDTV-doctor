@@ -4,11 +4,11 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import "../../Styles/css/breadcrumb.css";
 
-const Breadcrumbs = () => {
+const Breadcrumbs = ({ customItems }) => {
   const pathname = usePathname();
   const pathSegments = pathname.split("/").filter((segment) => segment);
 
-  const items = [
+  const items = customItems || [
     { label: "Home", href: "/" }, // Static Home link
     ...pathSegments.map((segment, idx) => {
       const href = `/${pathSegments.slice(0, idx + 1).join("/")}`;

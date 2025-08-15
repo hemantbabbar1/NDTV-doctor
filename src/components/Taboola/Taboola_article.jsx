@@ -2,13 +2,13 @@
 
 import React, { forwardRef } from "react";
 
-const Taboola_Article = forwardRef((props, ref) => {
+const Taboola_Article = forwardRef(({ leftSidebar, ...props }, ref) => {
   return (
     <>
       <div className="vjl-row">
-        <aside className="vjl-Lhs-2" />
+        {leftSidebar && <aside className="vjl-Lhs-2">{leftSidebar}</aside>}
         {/*=== RHS taboola ads ===*/}
-        <article className="vjl-Mid-2">
+        <article className={leftSidebar ? "vjl-Mid-2" : "vjl-md-12"}>
           <div className="sp-wrp">
             {/* taboola Ads ( after Story ) */}
             <div className="tbl_cnt_wrp Js-Tbl_ad-ftr" ref={ref}>
