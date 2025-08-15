@@ -8,7 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // This component now receives 'allData' and 'error' as props
-const Home_section4 = ({ allData, error }) => {
+const Home_section4_wap = ({ allData, error }) => {
   const categories = ["Women", "Men", "Kids"];
   const [activeTab, setActiveTab] = useState(0);
 
@@ -43,7 +43,7 @@ const Home_section4 = ({ allData, error }) => {
       <>
         <div className="vjl-md-12">
           {firstResult ? (
-            <div className="crd-c_v2 mb-30" key={firstResult.id}>
+            <div className="crd-b mb-0" key={firstResult.id}>
               <div className="crd_img">
                 <Link className="img-gr img-gr_a" href={firstResult.link}>
                   <Image
@@ -74,9 +74,11 @@ const Home_section4 = ({ allData, error }) => {
               No data found for this category.
             </div>
           )}
+
+          <div className="CrdSptr CrdSptr_ a"></div>
         </div>
         <div className="vjl-md-12">
-          <div className="ls-ns ls-ns-3">
+          <div className="ls-ns">
             <ul className="ls-ns_ul ls-ns_br">
               {filtered.slice(1, 4).map((item) => (
                 <li className="ls-ns_li" key={item.id}>
@@ -147,4 +149,4 @@ const Home_section4 = ({ allData, error }) => {
   );
 };
 
-export default Home_section4;
+export default Home_section4_wap;

@@ -1,9 +1,10 @@
 import React from "react";
+import "../../Styles/css/cards/cards-hm.css";
 import HmCrd_C from "./HmCrd_C";
 import Image from "next/image";
 import Link from "next/link";
 
-const Home_atf_story = ({ articles }) => {
+const Home_atf_story = ({ articles, error }) => {
   if (!articles || articles.length === 0) return null;
 
   // Main story (first article)

@@ -1,6 +1,6 @@
 "use client";
 import React, { forwardRef } from "react";
-import ScrollClassToggler from "../Common/ScrollClassToggler";
+import ScrollClassToggler from "../../Utils/ScrollClassToggler";
 
 const Taboola_home = forwardRef((props, ref) => {
   return (

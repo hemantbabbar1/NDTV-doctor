@@ -1,18 +1,30 @@
-@import "../grid/main-card-grid1.css";
-@import "../card-widget/lines-spacing-padding.css";
-@import "../elements/tittle-tabs-color.css";
-@import "../elements/list-news.css";
-@import "../cards/cards-hm.css";
-@import "../cards/cards-content.css";
-@import "../cards/doctor-cards-content.css";
-@import "../cards/card-b.css";
-@import "../cards/card-c.css";
-@import "../cards/card-c_v1.css";
-@import "../cards/card-c_v2.css";
-@import "../cards/card-d.css";
-@import "../cards/card-d_v1.css";
-@import "../cards/card-h.css";
-@import "../cards/card-bt.css";
-@import "../cards/card-image-transition.css";
-@import "./home-edits.css"; /* For Same folder file */
-@import "../helper.css";
+@import "../../../Styles/css/card-widget/lines-spacing-padding.css";
+
+@import "../../../Styles/css/elements/list-news.css";
+@import "../../../Styles/css/cards/cards-content.css";
+@import "../../../Styles/css/cards/doctor-cards-content.css";
+@import "../../../Styles/css/cards/card-a.css";
+@import "../../../Styles/css/cards/card-b.css";
+@import "../../../Styles/css/cards/card-c.css";
+@import "../../../Styles/css/cards/card-c_v1.css";
+@import "../../../Styles/css/cards/card-c_v2.css";
+@import "../../../Styles/css/cards/card-d.css";
+@import "../../../Styles/css/cards/card-d_v1.css";
+@import "../../../Styles/css/cards/card-h.css";
+@import "../../../Styles/css/cards/card-bt.css";
+
+/* @import "../../../Styles/css/wap-elements/tittle-tabs-color.css"; */
+/* @import "../../../Styles/css/wap-elements/full-rgt-hrscroll.css"; */
+/* @import "../../../Styles/css/cards-wap/cards-content.css"; */
+/* @import "../../../Styles/css/cards-wap/list-news.css"; */
+/* @import "../../../Styles/css/cards-wap/card-a.css"; */
+/* @import "../../../Styles/css/cards-wap/card-b.css"; */
+/* @import "../../../Styles/css/cards-wap/card-d.css"; */
+/* @import "../../../Styles/css/cards-wap/card-c.css"; */
+/* @import "../../../Styles/css/cards-wap/card-c_v1.css"; */
+/* @import "../../../Styles/css/cards-wap/card-h.css"; */
+/* @import "../../../Styles/css/cards-wap/card-bt.css"; */
+
+@import "../../../Styles/css/cards/card-image-transition.css";
+@import "../../../Styles/css/pages-css/home-edits.css"; /* For Same folder file */
+@import "../../../Styles/css/helper.css";

@@ -13,7 +13,10 @@ const Home_section6_server = async () => {
     );
 
     // Ensure allArticles is an array
-    articles = Array.isArray(allArticles) ? allArticles.slice(0, 3) : [];
+    articles = Array.isArray(allArticles.results)
+      ? allArticles.results.slice(0, 3)
+      : [];
+    //console.log("Home_section6_server articles:", articles);
   } catch (err) {
     console.error("Error in Home_section6_server:", err);
     error =

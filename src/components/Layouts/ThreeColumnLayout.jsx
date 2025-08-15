@@ -1,6 +1,6 @@
 import React from "react";
 import Taboola_Article from "../Taboola/Taboola_article.jsx";
-import ScrollClassToggler from "../Common/ScrollClassToggler";
+import ScrollClassToggler from "../../Utils/ScrollClassToggler";
 
 import "../../Styles/css/base/ndtv-col2.css";
 

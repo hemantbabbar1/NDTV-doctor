@@ -1,6 +1,9 @@
 import React from "react";
 import Home_section5 from "./Home_section5";
+import Home_section5_wap from "@/src/components/Home/homeWap/Home_section5_wap";
 import { fetchData } from "@/src/Utils/fetchData"; // Import fetchData helper function
+import { isMobile } from "@/src/Utils/deviceDetection";
+import { headers } from "next/headers";
 
 const Home_section5_server = async () => {
   let allData = [];
@@ -21,6 +24,15 @@ const Home_section5_server = async () => {
       e
     );
     error = "Failed to load data.";
+  }
+
+  // Device detection
+  const userAgent = headers().get("user-agent") || "";
+  const mobile = isMobile(userAgent);
+
+  // Conditional render for WAP
+  if (mobile) {
+    return <Home_section5_wap allData={allData} error={error} />;
   }
 
   return (

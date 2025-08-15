@@ -1,4 +1,4 @@
-// src/components/Common/ScrollClassToggler.jsx
+// src/Utils/ScrollClassToggler.js
 "use client";
 
 import React, { useEffect, useRef } from "react";
