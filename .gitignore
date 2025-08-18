@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# ignore article folder (for easy local access but not in git)
+/src/app/article/
+
 # debug
 npm-debug.log*
 yarn-debug.log*

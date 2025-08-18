@@ -13,40 +13,40 @@
   },
   {
     "id": "4",
-    "path": "/webstories",
+    "path": "/web-stories",
     "name": "Web Stories",
     "children": []
   },
 
   {
     "id": "2",
-    "path": "/faq",
+    "path": "",
     "name": "FAQ",
     "children": []
   },
   {
     "id": "3",
-    "path": "/videos",
+    "path": "",
     "name": "Videos",
     "children": []
   },
 
   {
     "id": "5",
-    "path": "/photos",
+    "path": "",
     "name": "Photos",
     "children": []
   },
 
   {
     "id": "6",
-    "path": "#",
+    "path": "",
     "name": "Weight loss",
     "children": []
   },
   {
     "id": "7",
-    "path": "#",
+    "path": "/baby-names",
     "name": "Baby Names",
     "children": []
   }

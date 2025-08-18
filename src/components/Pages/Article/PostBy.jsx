@@ -1,14 +1,14 @@
 import React from "react";
 
 const PostBy = ({ articleData, error }) => {
-  // Destructure relevant data from the articleData prop for easier access
+  // Safely destructure relevant data from the articleData prop with fallbacks
   const {
     byline,
     published,
     modified,
     primary_category,
     // Add other fields you want to display
-  } = articleData;
+  } = articleData || {};
 
   // Function to format the date string
   const formatDateTime = (dateTimeString) => {

@@ -22,7 +22,8 @@ const Home_section8_server = async () => {
   }
 
   // Device detection
-  const userAgent = headers().get("user-agent") || "";
+  const headersList = await headers();
+  const userAgent = headersList.get("user-agent") || "";
   const mobile = isMobile(userAgent);
 
   // Conditional render for WAP

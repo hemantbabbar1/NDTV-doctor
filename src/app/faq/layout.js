@@ -8,8 +8,7 @@ import ThreeColumnLayout from "@/src/components/Layouts/ThreeColumnLayout";
 //SEO for Lisiting Page Title and description here
 export const metadata = {
   title: "New List", // <title>
-  description: "News Listing Will Be Here",
-  keywords: "news, listing, articles",
+  description: "News Listing Will Be Here", //<Description>
 };
 
 export default function RootLayout({ children }) {
