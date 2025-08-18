@@ -3,7 +3,7 @@ import React from "react";
 // Layout Components
 import DynamicBreadcrumbs from "@/src/components/Common/DynamicBreadcrumbs";
 import ThreeColumnLayout from "@/src/components/Layouts/ThreeColumnLayout";
-import Lhs_sidebar from "@/src/components/SideBar/Lhs_sidebar";
+import Lhs_sidebar from "../../components/SideBar/Lhs_sidebar";
 import Rhs_sidebar from "@/src/components/Sidebar/Rhs_sidebar";
 
 // Category Article Layout
