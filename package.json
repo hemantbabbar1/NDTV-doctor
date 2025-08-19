@@ -13,7 +13,7 @@
     "critters": "^0.0.23",
     "dompurify": "^3.2.6",
     "isomorphic-dompurify": "^2.26.0",
-    "next": "15.3.2",
+    "next": "^15.4.6",
     "react": "^18.3.1",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.3.1",

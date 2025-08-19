@@ -19,6 +19,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "c.ndtvimg.com",
       },
+
       {
         protocol: "https",
         hostname: "www.ndtv.com",
@@ -47,6 +48,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "cmsapi.ndtv.net.in",
       },
+
       {
         protocol: "https",
         hostname: "ndtv-health.vercel.app",

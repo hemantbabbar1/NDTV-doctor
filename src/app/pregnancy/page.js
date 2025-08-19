@@ -25,7 +25,7 @@ const page = async () => {
     <>
       <div className="LstPg_cnt">
         {/* Page title */}
-        <Pagetitle2 title="Pregnancy" />
+        <Pagetitle2 title="Living Healthy" />
 
         {/* Error if Data is not coming through API */}
         {error ? (

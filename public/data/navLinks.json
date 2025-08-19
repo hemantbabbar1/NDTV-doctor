@@ -7,8 +7,8 @@
   },
   {
     "id": "1",
-    "path": "/pregnancy",
-    "name": "Pregancy",
+    "path": "/living-healthy",
+    "name": "Living Healthy",
     "children": []
   },
   {
@@ -20,27 +20,27 @@
 
   {
     "id": "2",
-    "path": "",
+    "path": "/faq",
     "name": "FAQ",
     "children": []
   },
   {
     "id": "3",
-    "path": "",
+    "path": "/videos",
     "name": "Videos",
     "children": []
   },
 
   {
     "id": "5",
-    "path": "",
+    "path": "/photos",
     "name": "Photos",
     "children": []
   },
 
   {
     "id": "6",
-    "path": "",
+    "path": "/weight-loss",
     "name": "Weight loss",
     "children": []
   },
