@@ -9,7 +9,7 @@ import Pagetitle2 from "@/src/components/Common/Pagetitle2.jsx";
 
 // Define API endpoints for each category
 const CATEGORY_APIS = {
-  "living-healthy": "/data/listing/list-page.json",
+  "living-healthy": "/data/listing/living-healthy.json",
   //faq: "/data/faqs.json", // FAQ support added
   // cancer: "/api/cancer-articles",
   // Add more categories here as needed
