@@ -1,5 +1,5 @@
 import React from "react";
-import { fetchData } from "@/src/Utils/fetchData";
+// import { fetchData } from "@/src/Utils/fetchData";
 import { isMobile } from "@/src/Utils/deviceDetection";
 import { headers } from "next/headers";
 import { notFound } from "next/navigation";
@@ -10,7 +10,7 @@ import "../../../Styles/css/article/story-page.css";
 import "../../../Styles/css/article/expand-txt.css";
 import "../../../Styles/css/article/story-comments.css";
 import "../../../Styles/css/article/post-by.css";
-import "../../../Styles/css/article/elements.css";
+// import "../../../Styles/css/article/elements.css";
 import "../../../Styles/css/article/ai-summary-accordion-1.css";
 import "../../../Styles/css/article/social.css";
 import "../../../Styles/css/article/copy-icon.css";
@@ -25,7 +25,7 @@ import SeoWidget from "@/src/components/Common/SeoWidget";
 
 // Category-based Dynamic Article Page
 const CategoryArticlePage = async ({ params }) => {
-  const { category, slug } = await params; // URL से category और slug मिलेगा
+  const { category, slug } = await params; // URL will provide category and slug
 
   // Device detection
   const requestHeaders = await headers();
@@ -80,13 +80,13 @@ const CategoryArticlePage = async ({ params }) => {
 
     //console.log("API Response:", apiData); // Debug log
 
-    // API से direct article data मिलता है (consistent format)
+    // API returns direct article data (consistent format)
     if (apiData && apiData.title) {
       // NDTV API consistently returns flat object with article properties
       articleData = apiData;
       console.log("Article loaded successfully:", articleData.title);
     } else {
-      // अगर title नहीं मिला तो error throw करते हैं
+      // If title is missing, throw error
       throw new Error(
         `Invalid API response - missing title. Available keys: ${Object.keys(
           apiData || {}
